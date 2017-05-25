@@ -59,7 +59,7 @@
     //列表项
     
     for (int i=0; i<2; i++) {
-        UILabel * topL = [[UILabel alloc] initWithFrame:CGRectMake(70+(W-80)/2*i, 0, (W-80)/2, 45)];
+        UILabel * topL = [[UILabel alloc] initWithFrame:CGRectMake(70+(W-80)/2*i, 0, 200, 45)];
         //topL.text = @"回款日  2015-09-10";
         topL.tag = 1000+i;
         topL.font = [UIFont systemFontOfSize:13];
@@ -105,9 +105,9 @@
 //}
 
 - (void)setListObj:(BackMoneyObj *)listObj{
-    _qishuLabel.text = listObj.qs;
-    _button.descriptionStr = listObj.proid;
-    _button.moneyStr = listObj.yhze;
+//    _qishuLabel.text = listObj.qs;
+//    _button.descriptionStr = listObj.proid;
+//    _button.moneyStr = listObj.yhze;
     _button.enabled = YES;
     
     int ztcode = [listObj.ztcode intValue];
@@ -121,16 +121,16 @@
             topl.attributedText = str1;
             //topl.text = [NSString stringWithFormat:@"还款日:%@",listObj.hkrq];
         }else if (i==1){
-            NSMutableAttributedString *str1 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"状态: %@",listObj.zt]];
-            if (ztcode==3){
-            [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 2)];
-            [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(3, str1.length-3)];
-            topl.attributedText = str1;
-            }else{
-                [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 2)];
-                [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3, str1.length-3)];
-                topl.attributedText = str1;
-            }
+//            NSMutableAttributedString *str1 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"状态: %@",listObj.zt]];
+//            if (ztcode==3){
+//            [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 2)];
+//            [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor lightGrayColor] range:NSMakeRange(3, str1.length-3)];
+//            topl.attributedText = str1;
+//            }else{
+//                [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 2)];
+//                [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3, str1.length-3)];
+//                topl.attributedText = str1;
+//            }
             //topl.text = [NSString stringWithFormat:@"状态:%@",listObj.zt];
         }
     }
@@ -162,12 +162,12 @@
         }
             break;
         case 3:{
-            [_button setTitle:@"已还款" forState:UIControlStateNormal];
-            [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            _button.layer.borderColor = [UIColor lightGrayColor].CGColor;
-            _button.backgroundColor = [UIColor lightGrayColor];
-            _button.imageView.hidden = YES;
-            _button.enabled = NO;
+//            [_button setTitle:@"已还款" forState:UIControlStateNormal];
+//            [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//            _button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//            _button.backgroundColor = [UIColor lightGrayColor];
+//            _button.imageView.hidden = YES;
+//            _button.enabled = NO;
         }
             break;
             

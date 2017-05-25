@@ -43,8 +43,8 @@
     self.navigationItem.title = @"安全设置";
     [self getMoreData];
 //    _setArr = @[@"实名认证",@"银行卡",@"交易密码",@"指纹"];
-    _setArr = @[@"交易密码"];
-    _set2Arr = @[@"修改登录密码",@"修改手机号码",@"联系我们"];
+//    _setArr = @[@"交易密码"];
+    _set2Arr = @[@"修改登录密码",@"联系我们"];
     NSArray * arr = @[@"未认证，点击认证",@"未绑定，点击绑定",@"未设置，点击设置",@""];
     _detailArr = [NSMutableArray arrayWithArray:arr];
     
@@ -60,7 +60,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
-    return 4;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -70,14 +70,14 @@
             return 1;
             break;
         case 1:
-            return 1;
+            return 2;
             break;
         case 2:
-            return 3;
-            break;
-        case 3:
             return 1;
             break;
+//        case 3:
+//            return 1;
+//            break;
         default:
             break;
     }
@@ -107,28 +107,28 @@
 //            }
         }
             break;
-        case 1:{
-            cell.textLabel.text = _setArr[indexPath.row];
-            cell.detailTextLabel.text = @"修改交易密码";
-//            if (indexPath.row ==0&&![_nameandidcardStr isEqualToString:@""]) {
-//                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//                cell.accessoryType = UITableViewCellAccessoryNone;
-//            }
-//            if (indexPath.row ==1&&![_nameandidcardStr isEqualToString:@""]) {
-//                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//                cell.accessoryType = UITableViewCellAccessoryNone;
-//            }
-        }
-            break;
-        case 2:
+//        case 1:{
+//            cell.textLabel.text = _setArr[indexPath.row];
+//            cell.detailTextLabel.text = @"修改交易密码";
+////            if (indexPath.row ==0&&![_nameandidcardStr isEqualToString:@""]) {
+////                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+////                cell.accessoryType = UITableViewCellAccessoryNone;
+////            }
+////            if (indexPath.row ==1&&![_nameandidcardStr isEqualToString:@""]) {
+////                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+////                cell.accessoryType = UITableViewCellAccessoryNone;
+////            }
+//        }
+//            break;
+        case 1:
             cell.textLabel.text = _set2Arr[indexPath.row];
-            if(indexPath.row==2){
-                cell.detailTextLabel.text = @"400-011-6518  (09:00-18:00)";
+            if(indexPath.row==1){
+                cell.detailTextLabel.text = @"4000-133-770  (09:00-18:00)";
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 cell.accessoryType = UITableViewCellAccessoryNone;
             }
             break;
-        case 3:{
+        case 2:{
             if (!_ishaveBtn) {
                 UIButton * submitBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
                 submitBtn.frame = CGRectMake(0, 0, self.view.frame.size.width, 55);
@@ -209,55 +209,55 @@
         case 0:
             
             break;
-        case 1:
-            switch (indexPath.row) {
+//        case 1:
+//            switch (indexPath.row) {
+////                case 0:{
+////                    if ([_nameandidcardStr isEqualToString:@""]) {
+////                        AuthNameTableViewController * authnameVC = [[AuthNameTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+////                        authnameVC.phoneStr = _phoneStr;
+////                        authnameVC.zhuceTime = _zhuceTime;
+////                        authnameVC.issetdealpwStr = _jiaoyimimaStr;
+////                        [self.navigationController pushViewController:authnameVC animated:YES];
+////                    }
+////                }
+////                    break;
+////                case 1:{
+////                    //没有绑卡;
+////                    if(_banknameStr&&[_banknameStr isEqualToString:@""]){
+////                        
+////                        AuthNameTableViewController * authnameVC = [[AuthNameTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+////                        authnameVC.phoneStr = _phoneStr;
+////                        authnameVC.zhuceTime = _zhuceTime;
+////                        authnameVC.issetdealpwStr = _jiaoyimimaStr;
+////                        [self.navigationController pushViewController:authnameVC animated:YES];
+////
+////                    }
+////                }
+////                    break;
 //                case 0:{
-//                    if ([_nameandidcardStr isEqualToString:@""]) {
-//                        AuthNameTableViewController * authnameVC = [[AuthNameTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-//                        authnameVC.phoneStr = _phoneStr;
-//                        authnameVC.zhuceTime = _zhuceTime;
-//                        authnameVC.issetdealpwStr = _jiaoyimimaStr;
-//                        [self.navigationController pushViewController:authnameVC animated:YES];
-//                    }
-//                }
-//                    break;
-//                case 1:{
-//                    //没有绑卡;
-//                    if(_banknameStr&&[_banknameStr isEqualToString:@""]){
-//                        
-//                        AuthNameTableViewController * authnameVC = [[AuthNameTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-//                        authnameVC.phoneStr = _phoneStr;
-//                        authnameVC.zhuceTime = _zhuceTime;
-//                        authnameVC.issetdealpwStr = _jiaoyimimaStr;
-//                        [self.navigationController pushViewController:authnameVC animated:YES];
+//                    //判断是否设置交易密码;
+//                    if ([_jiaoyimimaStr isEqualToString:@"已设置"]) {
+//                        ChengeDealPasswordTableViewController * chengedealVC = [[ChengeDealPasswordTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+//                        chengedealVC.userid = _userid;
+//                        chengedealVC.realnameStr = [_realnameStr isEqualToString:@""]?_loginname:_realnameStr;
+//                        chengedealVC.phonenum = _phonenum;
+//                        [self.navigationController pushViewController:chengedealVC animated:YES];
+//                    }else{
+//                        SetDealPasswordTableViewController * setdealVC = [[SetDealPasswordTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+//                         setdealVC.usernameStr = [_realnameStr isEqualToString:@""]?_loginname:_realnameStr;
+//                        setdealVC.phoneStr = _phonenum;
+//                        setdealVC.userid = [UserLoginStatus shareManager].userid;
+//                        [self.navigationController pushViewController:setdealVC animated:YES];
 //
 //                    }
 //                }
 //                    break;
-                case 0:{
-                    //判断是否设置交易密码;
-                    if ([_jiaoyimimaStr isEqualToString:@"已设置"]) {
-                        ChengeDealPasswordTableViewController * chengedealVC = [[ChengeDealPasswordTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                        chengedealVC.userid = _userid;
-                        chengedealVC.realnameStr = [_realnameStr isEqualToString:@""]?_loginname:_realnameStr;
-                        chengedealVC.phonenum = _phonenum;
-                        [self.navigationController pushViewController:chengedealVC animated:YES];
-                    }else{
-                        SetDealPasswordTableViewController * setdealVC = [[SetDealPasswordTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                         setdealVC.usernameStr = [_realnameStr isEqualToString:@""]?_loginname:_realnameStr;
-                        setdealVC.phoneStr = _phonenum;
-                        setdealVC.userid = [UserLoginStatus shareManager].userid;
-                        [self.navigationController pushViewController:setdealVC animated:YES];
-
-                    }
-                }
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-        case 2:
+//                    
+//                default:
+//                    break;
+//            }
+//            break;
+        case 1:
             switch (indexPath.row) {
                 case 0:{
 
@@ -268,19 +268,19 @@
                     [self.navigationController pushViewController:chengeloginVC animated:YES];
                 }
                     break;
+//                case 1:{
+//                    ChengePhoneTableViewController * chengephoneVC = [[ChengePhoneTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+//                    chengephoneVC.userid = [UserLoginStatus shareManager].userid;
+//                    chengephoneVC.phonenumStr = _phonenumStr;
+//                    chengephoneVC.phoneStr = _phonenum;
+//                    [self.navigationController pushViewController:chengephoneVC animated:YES];
+//                }
+//                    break;
                 case 1:{
-                    ChengePhoneTableViewController * chengephoneVC = [[ChengePhoneTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                    chengephoneVC.userid = [UserLoginStatus shareManager].userid;
-                    chengephoneVC.phonenumStr = _phonenumStr;
-                    chengephoneVC.phoneStr = _phonenum;
-                    [self.navigationController pushViewController:chengephoneVC animated:YES];
-                }
-                    break;
-                case 2:{
-                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"拨打" message:@"400-011-6518" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"拨打" message:@"4000-133-770" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
                     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"呼叫" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                        NSString * telStr = @"tel:4000116518";
+                        NSString * telStr = @"tel:4000133770";
                         UIWebView * webtelV = [[UIWebView alloc] init];
                         [webtelV loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:telStr]]];
                         [self.view addSubview:webtelV];

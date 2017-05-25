@@ -73,8 +73,8 @@
                   symbolName = "-[HaiHeNetBridge hkPayRequestWithUserId:andWithPlanId:andWithPayPassword:WithSuccess:]"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/HaiHeNetBridge.m"
-                  timestampString = "517222352.012447"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/HaiHeNetBridge.m"
+                  timestampString = "517389004.129828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1096"
@@ -88,8 +88,8 @@
                   symbolName = "__86-[HaiHeNetBridge hkPayRequestWithUserId:andWithPlanId:andWithPayPassword:WithSuccess:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/HaiHeNetBridge.m"
-                  timestampString = "517222352.015103"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/HaiHeNetBridge.m"
+                  timestampString = "517389004.133439"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1097"
@@ -121,8 +121,8 @@
                   symbolName = "-[RechargeAgainTableViewController getMoreDataWithUserId:]"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517222352.019759"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
+                  timestampString = "517389004.140349"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "57"
@@ -136,8 +136,8 @@
                   symbolName = "__58-[RechargeAgainTableViewController getMoreDataWithUserId:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517222352.021839"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
+                  timestampString = "517389004.143924"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "517222671.150717"
+            timestampString = "517386747.834604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "491"
-            endingLineNumber = "491">
+            startingLineNumber = "496"
+            endingLineNumber = "496">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "517222671.150717"
+            timestampString = "517386747.834604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "466"
-            endingLineNumber = "466"
+            startingLineNumber = "471"
+            endingLineNumber = "471"
             landmarkName = "@implementation RootTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "517222671.150717"
+            timestampString = "517386747.834604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "487"
-            endingLineNumber = "487">
+            startingLineNumber = "492"
+            endingLineNumber = "492">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -261,8 +261,8 @@
                   symbolName = "-[RechargeAgainTableViewController submitButtonBeTouch:]"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517222352.046155"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
+                  timestampString = "517389004.162277"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "199"
@@ -276,8 +276,8 @@
                   symbolName = "__56-[RechargeAgainTableViewController submitButtonBeTouch:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517222352.048355"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
+                  timestampString = "517389004.164885"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "199"
@@ -285,22 +285,6 @@
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/HaiHeNetBridge.m"
-            timestampString = "517221838.043981"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1180"
-            endingLineNumber = "1180"
-            landmarkName = "-locationWithlatitude:Withlongitude:WithUserId:WithAddress:WithSuccess:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -389,8 +373,8 @@
                   symbolName = "__105+[RechargeObj globalTimelineWithDrawRecordWithUserId:andWithStartPage:andWithPresentStatus:andWithBlock:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/RechargeObj.m"
-                  timestampString = "517222352.072433"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeObj.m"
+                  timestampString = "517389004.187458"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -404,8 +388,8 @@
                   symbolName = "__105+[RechargeObj globalTimelineWithDrawRecordWithUserId:andWithStartPage:andWithPresentStatus:andWithBlock:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/Desktop/%E5%AE%B9%E6%98%93%E8%BF%98/RongLianApp1.0/HaiHeApp/RechargeObj.m"
-                  timestampString = "517222352.074567"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeObj.m"
+                  timestampString = "517389004.189755"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -444,22 +428,6 @@
             startingLineNumber = "254"
             endingLineNumber = "254"
             landmarkName = "-getMoreData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/HaiHeNetworking.m"
-            timestampString = "517210658.291667"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-sendRequestWithSendMessage:WithSuccess:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

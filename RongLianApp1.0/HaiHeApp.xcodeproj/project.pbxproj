@@ -147,6 +147,8 @@
 		BD3195B31CCDF45E004CA350 /* MD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3195B01CCDF45E004CA350 /* MD5Encryption.m */; };
 		BD3195B61CCDFB3A004CA350 /* DESEncryptFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3195B51CCDFB3A004CA350 /* DESEncryptFile.m */; };
 		BD571C3C1ED3FCFC00038CC3 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = BD571C3B1ED3FCFC00038CC3 /* NSArray+Log.m */; };
+		BD8D015A1ED6AC4B0054020F /* HuankuanList_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8D01581ED6AC4B0054020F /* HuankuanList_Cell.m */; };
+		BD8D015B1ED6AC4B0054020F /* HuankuanList_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8D01591ED6AC4B0054020F /* HuankuanList_Cell.xib */; };
 		BDBE99271ED2C1630062401D /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBE99261ED2C1630062401D /* AMapFoundationKit.framework */; };
 		BDBE99291ED2C16B0062401D /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBE99281ED2C16B0062401D /* AMapLocationKit.framework */; };
 		BDBE99331ED2C1930062401D /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBE992C1ED2C1930062401D /* ChineseInclude.m */; };
@@ -436,6 +438,9 @@
 		BD3195B51CCDFB3A004CA350 /* DESEncryptFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESEncryptFile.m; sourceTree = "<group>"; };
 		BD571C3A1ED3FCFC00038CC3 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		BD571C3B1ED3FCFC00038CC3 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		BD8D01571ED6AC4A0054020F /* HuankuanList_Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuankuanList_Cell.h; sourceTree = "<group>"; };
+		BD8D01581ED6AC4B0054020F /* HuankuanList_Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuankuanList_Cell.m; sourceTree = "<group>"; };
+		BD8D01591ED6AC4B0054020F /* HuankuanList_Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HuankuanList_Cell.xib; sourceTree = "<group>"; };
 		BDBE99261ED2C1630062401D /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		BDBE99281ED2C16B0062401D /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		BDBE992B1ED2C1930062401D /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
@@ -878,6 +883,9 @@
 				7217FC881BEC65D7006D874D /* NowifiView.m */,
 				7217FC8D1BEC86FD006D874D /* TouchIDObj.h */,
 				7217FC8E1BEC86FD006D874D /* TouchIDObj.m */,
+				BD8D01571ED6AC4A0054020F /* HuankuanList_Cell.h */,
+				BD8D01581ED6AC4B0054020F /* HuankuanList_Cell.m */,
+				BD8D01591ED6AC4B0054020F /* HuankuanList_Cell.xib */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -1139,6 +1147,7 @@
 				72B0B8A81BD4887E00144E03 /* MyPrivate_key.p12 in Resources */,
 				7226AEF51BD6447100B6012E /* MJRefresh.bundle in Resources */,
 				725BA77D1BB38F9000635293 /* Assets.xcassets in Resources */,
+				BD8D015B1ED6AC4B0054020F /* HuankuanList_Cell.xib in Resources */,
 				725BA77B1BB38F9000635293 /* Main.storyboard in Resources */,
 				72B0B8C01BD48B4E00144E03 /* MyPublic_key.der in Resources */,
 				72B0B8AC1BD4887E00144E03 /* SeverPrivate_key.p12 in Resources */,
@@ -1331,6 +1340,7 @@
 				7208A3891BF43A840018BC83 /* UIImage+MultiFormat.m in Sources */,
 				722656951C88466A00D726F1 /* RechargeSuccessTableViewController.m in Sources */,
 				7226AEF31BD6447100B6012E /* MJRefreshNormalHeader.m in Sources */,
+				BD8D015A1ED6AC4B0054020F /* HuankuanList_Cell.m in Sources */,
 				72B0B8A61BD4887E00144E03 /* AFURLSessionManager.m in Sources */,
 				722656591C88448C00D726F1 /* SeviceAgreementViewController.m in Sources */,
 				7217FC921BECA0F9006D874D /* FirstStartViewController.m in Sources */,
@@ -1560,13 +1570,6 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libraries/extends/QQSDK",
-					"$(PROJECT_DIR)/libraries",
-					"$(PROJECT_DIR)/ShareSDK/Connection",
-					"$(PROJECT_DIR)/ShareSDK/Core",
-					"$(PROJECT_DIR)/ShareSDK/Extend/QQConnectSDK",
-					"$(PROJECT_DIR)/ShareSDK",
-					"$(PROJECT_DIR)/ShareSDK/UI",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = HaiHeApp/Info.plist;
@@ -1575,11 +1578,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HaiHeApp",
-					"$(PROJECT_DIR)/lib",
-					"$(PROJECT_DIR)/libraries/extends/SinaWeiboSDK",
-					"$(PROJECT_DIR)/libraries/extends/WeChatSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/SDWebImage/lib",
 				);
 				OTHER_LDFLAGS = "-all_load";
@@ -1588,7 +1586,7 @@
 				PROVISIONING_PROFILE = "c3676fd1-0a27-4d06-b3c0-f726fa4d3421";
 				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_2017_5_23_dev;
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1604,13 +1602,6 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libraries/extends/QQSDK",
-					"$(PROJECT_DIR)/libraries",
-					"$(PROJECT_DIR)/ShareSDK/Connection",
-					"$(PROJECT_DIR)/ShareSDK/Core",
-					"$(PROJECT_DIR)/ShareSDK/Extend/QQConnectSDK",
-					"$(PROJECT_DIR)/ShareSDK",
-					"$(PROJECT_DIR)/ShareSDK/UI",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = HaiHeApp/Info.plist;
@@ -1619,11 +1610,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HaiHeApp",
-					"$(PROJECT_DIR)/lib",
-					"$(PROJECT_DIR)/libraries/extends/SinaWeiboSDK",
-					"$(PROJECT_DIR)/libraries/extends/WeChatSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
-					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/SDWebImage/lib",
 				);
 				OTHER_LDFLAGS = "-all_load";
@@ -1632,7 +1618,7 @@
 				PROVISIONING_PROFILE = "739c3534-3c2e-4ea8-819e-4af90a3d7125";
 				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_2017_5_23_dis;
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

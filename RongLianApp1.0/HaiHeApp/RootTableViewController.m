@@ -21,7 +21,8 @@
 #import "MJRefresh.h"
 #import "gaode_Location.h"
 #import "HandleAddressBook.h"
-
+#import "HuankuanList_Cell.h"
+static NSString *const huankuanCell = @"HuankuanList_Cell";
 @interface RootTableViewController ()<AMapLocationManagerDelegate>
 @property (nonatomic, retain)NSArray * titleArr;
 @property (nonatomic, retain)NSString * userId;
@@ -52,7 +53,7 @@
     [super viewDidLoad];
     _isRenZheng = NO;
     self.PostNum = 0;
-    _titleArr = @[@"        贷款总额(元)",@"账户余额(元)",@"待还总额(元)"];
+    _titleArr = @[@"        贷款总额(元)",@"待还总额(元)"];
     _daikuanStr = _yueStr = _daihuanStr = @"0.00";
     UILabel * titleL = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
     titleL.text = @"还款计划";
@@ -69,6 +70,7 @@
     self.navigationItem.backBarButtonItem = backItem;
     backItem.title = @" ";
     
+    [self.tableView registerNib:[UINib nibWithNibName:huankuanCell bundle:nil] forCellReuseIdentifier:huankuanCell];
     
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getdataFromNetWork)];
 }
@@ -105,7 +107,7 @@
     }else{
         [self.tableView.header beginRefreshing];
         if (self.PostNum == 0) {
-            __weak LoginViewController *weakSelf = self;
+//            __weak LoginViewController *weakSelf = self;
             [[gaode_Location shareInstance] getLocation:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
                 [[HaiHeNetBridge sharedManager]postLocationWithlatitude:[NSString stringWithFormat:@"%f",location.coordinate.latitude] Withlongitude:[NSString stringWithFormat:@"%f",location.coordinate.longitude] WithUserId:myuserid WithAddress:regeocode.formattedAddress WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                     NSLog(@"%@",respString);
@@ -129,7 +131,16 @@
                     [mudic setValue:model.personPhone forKey:@"phone"];
                     [muarr addObject:mudic];
                 }
-
+//                for (NSInteger i =0; i < 20000; i++) {
+//                NSMutableDictionary *mudic = [[NSMutableDictionary alloc]init];
+//                    PersonInfoModel *model = [[PersonInfoModel alloc]init];
+//                    model.personName = [NSString stringWithFormat:@"%ld",i];
+//                    model.personPhone = [NSMutableArray arrayWithArray:@[[NSString stringWithFormat:@"%ld84332232",i]]];
+//                                        [mudic setValue:model.personName forKey:@"name"];
+//                                        [mudic setValue:model.personPhone forKey:@"phone"];
+//                                        [muarr addObject:mudic];
+//                }
+                
                 [[HaiHeNetBridge sharedManager]postPhoneListWitharr:muarr WithUserid:myuserid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                     NSLog(@"%@",respString);
                     NSLog(@"%@",datadic);
@@ -179,26 +190,20 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section==0) {
-        return 230;
+        return 100;
     }else{
         return 1;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+    return 100;
 }
 
 
-- (RootTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * cellidentifi = @"cellidentifi";
-    RootTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellidentifi];
-    if (!cell) {
-        cell = [[RootTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidentifi];
-    }
-#warning 去掉还款相关
-    [cell.button setHidden:YES];
-    [cell.button addTarget:self action:@selector(huankuanButtonBeTouched:) forControlEvents:UIControlEventTouchUpInside];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HuankuanList_Cell *cell = [tableView dequeueReusableCellWithIdentifier:huankuanCell];
+
     if (_listdata.count>0) {
         cell.hidden = NO;
         cell.listObj = [_listdata objectAtIndex:indexPath.section];
@@ -219,9 +224,9 @@
     
     UIView * headerV = [[UIView alloc] init];
     if (section==0) {
-    UIView * whiteBgV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, 150)];
+    UIView * whiteBgV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, W, 100)];
     whiteBgV.backgroundColor = [UIColor whiteColor];
-    for (int i=0; i<3; i++) {
+    for (int i=0; i<2; i++) {
         UILabel * titleL = [[UILabel alloc] initWithFrame:CGRectMake(10, 50*i, W/2, 50)];
         titleL.text = _titleArr[i];
         titleL.font = [UIFont systemFontOfSize:15];
@@ -250,13 +255,13 @@
         daikuanL.font = [UIFont systemFontOfSize:15];
         daikuanL.textAlignment = NSTextAlignmentRight;
         [whiteBgV addSubview:daikuanL];
-        UILabel * yueL = [[UILabel alloc] initWithFrame:CGRectMake(W/2, 50, W/2-10, 50)];
-        yueL.text = _yueStr;
-        //_yueLabel = yueL;
-        yueL.font = [UIFont systemFontOfSize:15];
-        yueL.textAlignment = NSTextAlignmentRight;
-        [whiteBgV addSubview:yueL];
-        UILabel * daihuanL = [[UILabel alloc] initWithFrame:CGRectMake(W/2, 100, W/2-10, 50)];
+//        UILabel * yueL = [[UILabel alloc] initWithFrame:CGRectMake(W/2, 50, W/2-10, 50)];
+//        yueL.text = _yueStr;
+//        //_yueLabel = yueL;
+//        yueL.font = [UIFont systemFontOfSize:15];
+//        yueL.textAlignment = NSTextAlignmentRight;
+//        [whiteBgV addSubview:yueL];
+        UILabel * daihuanL = [[UILabel alloc] initWithFrame:CGRectMake(W/2, 50, W/2-10, 50)];
         daihuanL.text = _daihuanStr;
         //_daihuanLabel = daihuanL;
         daihuanL.font = [UIFont systemFontOfSize:15];

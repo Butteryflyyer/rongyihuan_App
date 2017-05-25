@@ -115,6 +115,7 @@
         for(CNLabeledValue *labeledValue in phones)
         {
             CNPhoneNumber *phone = labeledValue.value;
+            NSLog(@"%@",phone.stringValue);
             [model.personPhone addObject:(phone.stringValue ? phone.stringValue : @"我也不知道")];
         }
         
@@ -158,15 +159,35 @@
         // 联系人每个拼音首字母
         model.personNameHeadLetter = @"";
         
-        // 联系人电话
-        ABMultiValueRef phones = ABRecordCopyValue(person, kABPersonPhoneProperty);
-        CFIndex phoneCout = ABMultiValueGetCount(phones);
-        for(int j=0; j<phoneCout; j++)
+        //读取电话多值
+
+        ABMultiValueRef phone = ABRecordCopyValue(person, kABPersonPhoneProperty);
+        for (int k = 0; k<ABMultiValueGetCount(phone); k++)
         {
-            NSString *phone = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(phones, i);
-            [model.personPhone addObject:phone ? phone : @"我也不知道"];
+            //获取电话Label
+            NSString * personPhoneLabel = (__bridge NSString*)ABAddressBookCopyLocalizedLabel(ABMultiValueCopyLabelAtIndex(phone, k));
+            //            获取該Label下的电话值
+            NSString * tempstr = (__bridge NSString*)ABMultiValueCopyValueAtIndex(phone, k);
+            
+            
+//            NSArray *array = [NSArray arrayWithObjects: personPhoneLabel,tempstr, nil];
+            
+            NSLog(@"%@  %@",personPhoneLabel,tempstr);
+            
+            
+            [model.personPhone addObject:tempstr];
         }
-        CFRelease(phones);
+        
+//        // 联系人电话
+//        ABMultiValueRef phones = ABRecordCopyValue(person, kABPersonPhoneProperty);
+//        CFIndex phoneCout = ABMultiValueGetCount(phones);
+//        for(int j=0; j<phoneCout; j++)
+//        {
+//            NSString *phone = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(phones, i);
+//                NSLog(@"%@",phone);
+//            [model.personPhone addObject:phone ? phone : @"我也不知道"];
+//        }
+//        CFRelease(phones);
         
         [array addObject:model];
     }
@@ -183,7 +204,7 @@
  */
 + (void)showAlert
 {
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"请在iPhone的“设置-隐私-通讯录”选项中，允许BlurrySearch访问您的通讯录" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"请在iPhone的“设置-隐私-通讯录”选项中，允许融易还访问您的通讯录" preferredStyle:UIAlertControllerStyleAlert];
     
     [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
     
