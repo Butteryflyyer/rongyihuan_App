@@ -13,7 +13,7 @@
 //ShareSDK
 #import "DESObject.h"
 //#import "APService.h"
-#import "JPUSHService.h"
+//#import "JPUSHService.h"
 #import "gaode_Location.h"
 #import "DESEncryptFile.h"
 #import "HandleAddressBook.h"
@@ -38,11 +38,11 @@
 //    [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
 //        
 //    }];
-    NSArray * accoutArr = [SSKeychain accountsForService:@"haihejinrong"];
+    NSArray * accoutArr = [SSKeychain accountsForService:@"ronglian"];
     if (accoutArr&&accoutArr.count>0) {
         NSDictionary * usermessageDic = accoutArr[0];
         NSString * usernameStr = [usermessageDic objectForKey:@"acct"];
-        NSString * passwordStr = [SSKeychain passwordForService:@"haihejinrong" account:usernameStr];
+        NSString * passwordStr = [SSKeychain passwordForService:@"ronglian" account:usernameStr];
         if (passwordStr) {
             //登录;
             [[HaiHeNetBridge sharedManager] userLoginRequestWithUserName:usernameStr andWithPassword:passwordStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
@@ -54,11 +54,11 @@
                         }else{
                             NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
                             if (![userdefault objectForKey:@"isfirststart1"]) {
-                                NSArray * accArr = [SSKeychain accountsForService:@"haihejinrong"];
+                                NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
                                 for (int i=0; i<accArr.count; i++) {
                                     NSDictionary * accDic  = accArr[i];
                                     NSString * name = [accDic objectForKey:@"acct"];
-                                    [SSKeychain deletePasswordForService:@"haihejinrong" account:name];
+                                    [SSKeychain deletePasswordForService:@"ronglian" account:name];
                                     [userdefault setObject:@"10" forKey:@"haveshoushimima"];
                                     [userdefault setObject:@"" forKey:@"username_lock"];
                                 }
@@ -131,18 +131,18 @@
 }
 
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    
-    // Required
-    [JPUSHService registerDeviceToken:deviceToken];
-}
-//2016年1月18号
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
-    // IOS 7 Support Required
-    [JPUSHService handleRemoteNotification:userInfo];
-    completionHandler(UIBackgroundFetchResultNewData);
-}
+//- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+//    
+//    // Required
+//    [JPUSHService registerDeviceToken:deviceToken];
+//}
+////2016年1月18号
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+//    
+//    // IOS 7 Support Required
+//    [JPUSHService handleRemoteNotification:userInfo];
+//    completionHandler(UIBackgroundFetchResultNewData);
+//}
 
 //- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //    

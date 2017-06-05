@@ -6,103 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/SafeSetTableViewController.m"
-            timestampString = "517222858.195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/SafeSetTableViewController.m"
-            timestampString = "517222858.195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/SafeSetTableViewController.m"
-            timestampString = "517222858.195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/HaiHeNetBridge.m"
-            timestampString = "483441442.133128"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1096"
-            endingLineNumber = "1096"
-            landmarkName = "-hkPayRequestWithUserId:andWithPlanId:andWithPayPassword:WithSuccess:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HaiHeNetBridge hkPayRequestWithUserId:andWithPlanId:andWithPayPassword:WithSuccess:]"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/HaiHeNetBridge.m"
-                  timestampString = "517389004.129828"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1096"
-                  endingLineNumber = "1096"
-                  offsetFromSymbolStart = "172">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__86-[HaiHeNetBridge hkPayRequestWithUserId:andWithPlanId:andWithPayPassword:WithSuccess:]_block_invoke"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/HaiHeNetBridge.m"
-                  timestampString = "517389004.133439"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1097"
-                  endingLineNumber = "1097"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeAgainTableViewController.m"
@@ -115,34 +19,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[RechargeAgainTableViewController getMoreDataWithUserId:]"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517389004.140349"
+                  timestampString = "518064868.371034"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "57"
                   endingLineNumber = "57"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "43">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__58-[RechargeAgainTableViewController getMoreDataWithUserId:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517389004.143924"
+                  timestampString = "518064868.372632"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "58"
                   endingLineNumber = "58"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "75">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -150,7 +54,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeAgainTableViewController.m"
@@ -166,25 +70,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "517386747.834604"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "517386747.834604"
+            timestampString = "518064867.185538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "471"
@@ -196,21 +86,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "517386747.834604"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "492"
-            endingLineNumber = "492">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeAgainTableViewController.m"
@@ -226,7 +102,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeAgainTableViewController.m"
@@ -242,7 +118,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeAgainTableViewController.m"
@@ -255,34 +131,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[RechargeAgainTableViewController submitButtonBeTouch:]"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517389004.162277"
+                  timestampString = "518064868.386501"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "199"
                   endingLineNumber = "199"
-                  offsetFromSymbolStart = "984">
+                  offsetFromSymbolStart = "973">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__56-[RechargeAgainTableViewController submitButtonBeTouch:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeAgainTableViewController.m"
-                  timestampString = "517389004.164885"
+                  timestampString = "518064868.388107"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "199"
                   endingLineNumber = "199"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -290,7 +166,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeAgainTableViewController.m"
@@ -306,23 +182,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/SafeSetTableViewController.m"
-            timestampString = "517222858.195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeRecordTableViewController.m"
@@ -338,7 +198,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeObj.m"
@@ -354,7 +214,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeObj.m"
@@ -367,34 +227,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__105+[RechargeObj globalTimelineWithDrawRecordWithUserId:andWithStartPage:andWithPresentStatus:andWithBlock:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeObj.m"
-                  timestampString = "517389004.187458"
+                  timestampString = "518064868.400876"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
                   endingLineNumber = "61"
-                  offsetFromSymbolStart = "744">
+                  offsetFromSymbolStart = "857">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__105+[RechargeObj globalTimelineWithDrawRecordWithUserId:andWithStartPage:andWithPresentStatus:andWithBlock:]_block_invoke"
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/RechargeObj.m"
-                  timestampString = "517389004.189755"
+                  timestampString = "518064868.402586"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
                   endingLineNumber = "61"
-                  offsetFromSymbolStart = "796">
+                  offsetFromSymbolStart = "903">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -402,7 +262,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeRecordTableViewController.m"
@@ -418,7 +278,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RechargeRecordTableViewController.m"

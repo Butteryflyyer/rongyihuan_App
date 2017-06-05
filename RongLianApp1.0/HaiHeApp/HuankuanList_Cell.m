@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *HuanKuan_Day;
 @property (weak, nonatomic) IBOutlet UILabel *BenJin_count;
 
-@property (weak, nonatomic) IBOutlet UILabel *QitaMoney_Count;
+
 @property (weak, nonatomic) IBOutlet UILabel *Fuwu_Count;
 @property (weak, nonatomic) IBOutlet UILabel *YiyongAll_count;
 @end
@@ -39,7 +39,7 @@
     _listObj = listObj;
     
     self.BenJin_count.text = [NSString stringWithFormat:@"%@",listObj.bj];
-    self.QitaMoney_Count.text =[NSString stringWithFormat:@"%@",listObj.qtfy] ;
+
     self.Fuwu_Count.text = [NSString stringWithFormat:@"%@",listObj.fwf];
     self.YiyongAll_count.text = [NSString stringWithFormat:@"%@",listObj.yhze];
     self.HuanKuan_Day.text =[NSString stringWithFormat:@"%@",listObj.hkrq];

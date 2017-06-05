@@ -1000,7 +1000,7 @@
                     if([[dic objectForKey:@"respCode"] isEqualToString:@"000"]){
                         returnData(nil,dic);
                     }else{
-                        returnData([dic objectForKey:@"respCodeDesc"],nil);
+                        returnData([dic objectForKey:@"respCodeDesc"],dic);
                     }
                     
                 }else{

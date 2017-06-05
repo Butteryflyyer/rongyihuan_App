@@ -250,7 +250,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
         [whiteBgV addSubview:iconV];
         
         UILabel * daikuanL = [[UILabel alloc] initWithFrame:CGRectMake(W/2, 0, W/2-10, 50)];
-        daikuanL.text = _daikuanStr;
+        daikuanL.text = [NSString stringWithFormat:@"%@",_daikuanStr];
         //_daikuanLabel = daikuanL;
         daikuanL.font = [UIFont systemFontOfSize:15];
         daikuanL.textAlignment = NSTextAlignmentRight;
@@ -262,7 +262,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
 //        yueL.textAlignment = NSTextAlignmentRight;
 //        [whiteBgV addSubview:yueL];
         UILabel * daihuanL = [[UILabel alloc] initWithFrame:CGRectMake(W/2, 50, W/2-10, 50)];
-        daihuanL.text = _daihuanStr;
+        daihuanL.text = [NSString stringWithFormat:@"%@",_daihuanStr];
         //_daihuanLabel = daihuanL;
         daihuanL.font = [UIFont systemFontOfSize:15];
         daihuanL.textColor = [UIColor redColor];

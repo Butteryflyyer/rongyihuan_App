@@ -324,14 +324,14 @@
                 [[ShowMessageView shareManager] showMessage:respString];
             }else{
                 
-                NSArray * accArr = [SSKeychain accountsForService:@"haihejinrong"];
+                NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
                 for (int i=0; i<accArr.count; i++) {
                     NSDictionary * accDic  = accArr[i];
                     NSString * name = [accDic objectForKey:@"acct"];
-                    [SSKeychain deletePasswordForService:@"haihejinrong" account:name];
+                    [SSKeychain deletePasswordForService:@"ronglian" account:name];
                 }
                 
-                if([SSKeychain setPassword:passwordTF.text forService:@"haihejinrong" account:_registerPhone]){
+                [SSKeychain setPassword:passwordTF.text forService:@"ronglian" account:_registerPhone];
                     if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {
                         [[ShowMessageView shareManager] showMessage:@"数据错误,请重试"];
                     }else{
@@ -354,9 +354,9 @@
 //                            [self.navigationController pushViewController:successVC animated:YES];
                        
                     }
-                }else{
-                    [[ShowMessageView shareManager] showMessage:@"错误000,联系开发者"];
-                }
+//                }else{
+//                    [[ShowMessageView shareManager] showMessage:@"错误000,联系开发者"];
+//                }
             }
         }];
 

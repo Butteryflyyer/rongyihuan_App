@@ -358,7 +358,7 @@
 		726D128A1BC8E0A7008F2B77 /* RightButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightButtonTableViewCell.h; sourceTree = "<group>"; };
 		726D128B1BC8E0A7008F2B77 /* RightButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightButtonTableViewCell.m; sourceTree = "<group>"; };
 		727C8E461C4CE971005F0D36 /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
-		727C8E471C4CE971005F0D36 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		727C8E471C4CE971005F0D36 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPUSHService.h; path = ../../SDWebImage/lib/JPUSHService.h; sourceTree = "<group>"; };
 		727F31DF1BD4A83700CC04A4 /* RegularClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularClass.h; sourceTree = "<group>"; };
 		727F31E01BD4A83700CC04A4 /* RegularClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularClass.m; sourceTree = "<group>"; };
 		727F31E11BD4A83700CC04A4 /* ShowMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMessageView.h; sourceTree = "<group>"; };
@@ -427,6 +427,7 @@
 		A00C7DCD4394954F29400A2F /* libPods-HaiHeAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HaiHeAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0154481CCF124100D426D7 /* des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
 		BD0154491CCF124100D426D7 /* des.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = des.m; sourceTree = "<group>"; };
+		BD099CB01EE1114F00CA76ED /* HaiHeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaiHeApp.entitlements; sourceTree = "<group>"; };
 		BD3195AA1CCDF45E004CA350 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
 		BD3195AB1CCDF45E004CA350 /* Base64Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Util.m; sourceTree = "<group>"; };
 		BD3195AC1CCDF45E004CA350 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
@@ -755,6 +756,7 @@
 		725BA76F1BB38F9000635293 /* HaiHeApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD099CB01EE1114F00CA76ED /* HaiHeApp.entitlements */,
 				BD571C391ED3FC3100038CC3 /* tools */,
 				BDBE99371ED2C1A60062401D /* gaodei_Location */,
 				BDBE992A1ED2C1920062401D /* address_book_Manager */,
@@ -848,7 +850,6 @@
 			isa = PBXGroup;
 			children = (
 				727C8E461C4CE971005F0D36 /* jpush-ios-2.1.0.a */,
-				727C8E471C4CE971005F0D36 /* JPUSHService.h */,
 			);
 			name = lib;
 			path = SDWebImage/lib;
@@ -989,6 +990,7 @@
 			children = (
 				BDBE992B1ED2C1930062401D /* ChineseInclude.h */,
 				BDBE992C1ED2C1930062401D /* ChineseInclude.m */,
+				727C8E471C4CE971005F0D36 /* JPUSHService.h */,
 				BDBE992D1ED2C1930062401D /* HandleAddressBook.h */,
 				BDBE992E1ED2C1930062401D /* HandleAddressBook.m */,
 				BDBE992F1ED2C1930062401D /* PersonInfoModel.h */,
@@ -1096,15 +1098,23 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = BSGYLY83PB;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					725BA7851BB38F9000635293 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Y96YQK2J2B;
+						DevelopmentTeam = BSGYLY83PB;
 						TestTargetID = 725BA76C1BB38F9000635293;
 					};
 					725BA7901BB38F9000635293 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Y96YQK2J2B;
+						DevelopmentTeam = BSGYLY83PB;
 						TestTargetID = 725BA76C1BB38F9000635293;
 					};
 				};
@@ -1495,6 +1505,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bing xu (3B53NB8C7E)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BSGYLY83PB;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1514,7 +1525,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c3676fd1-0a27-4d06-b3c0-f726fa4d3421";
+				PROVISIONING_PROFILE = "add372ca-82cc-446c-bb38-b87f69b2e80d";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1540,6 +1551,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhong Ying Sheng Ke Information Consulting Co., Ltd. (BSGYLY83PB)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BSGYLY83PB;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1552,7 +1564,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "739c3534-3c2e-4ea8-819e-4af90a3d7125";
+				PROVISIONING_PROFILE = "05237507-1b78-4825-a1f8-42faa82202b7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1564,6 +1576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HaiHeApp/HaiHeApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: bing xu (3B53NB8C7E)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bing xu (3B53NB8C7E)";
 				DEVELOPMENT_TEAM = BSGYLY83PB;
@@ -1583,8 +1596,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronglian.rongyihuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c3676fd1-0a27-4d06-b3c0-f726fa4d3421";
-				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_2017_5_23_dev;
+				PROVISIONING_PROFILE = "add372ca-82cc-446c-bb38-b87f69b2e80d";
+				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_app_dev_201765;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -1596,7 +1609,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Haihe Inclusive Financial Information Service Co., Ltd. (KRQ8K4DQC2)";
+				CODE_SIGN_ENTITLEMENTS = HaiHeApp/HaiHeApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhong Ying Sheng Ke Information Consulting Co., Ltd. (BSGYLY83PB)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhong Ying Sheng Ke Information Consulting Co., Ltd. (BSGYLY83PB)";
 				DEVELOPMENT_TEAM = BSGYLY83PB;
 				ENABLE_BITCODE = NO;
@@ -1615,8 +1629,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronglian.rongyihuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "739c3534-3c2e-4ea8-819e-4af90a3d7125";
-				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_2017_5_23_dis;
+				PROVISIONING_PROFILE = "05237507-1b78-4825-a1f8-42faa82202b7";
+				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_app_Dis201765;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};

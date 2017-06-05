@@ -160,11 +160,11 @@
         NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
         [userdefault setObject:@"" forKey:@"Myuserid"];
         [userdefault synchronize];
-        NSArray * accArr = [SSKeychain accountsForService:@"haihejinrong"];
+        NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
         for (int i=0; i<accArr.count; i++) {
             NSDictionary * accDic  = accArr[i];
             NSString * name = [accDic objectForKey:@"acct"];
-            [SSKeychain deletePasswordForService:@"haihejinrong" account:name];
+            [SSKeychain deletePasswordForService:@"ronglian" account:name];
         }
         [UserLoginStatus shareManager].userid = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
@@ -312,6 +312,7 @@
             _banknameStr = [datadic objectForKey:@"ssyh"];
             _jiaoyimimaStr = [datadic objectForKey:@"jjmm"];
             _phonenumStr = [datadic objectForKey:@"sjh"];
+            _loginname = [datadic objectForKey:@"sjh"];
            
             if (![_nameandidcardStr isEqualToString:@""]&&![_nameandidcardStr isKindOfClass:[NSNull class]]) {
                 if (![_nameandidcardStr isKindOfClass:[NSNull class]]) {

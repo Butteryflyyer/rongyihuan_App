@@ -181,52 +181,21 @@
             [[ShowMessageView shareManager] showMessage:respString];
         }else{
             //保存用户名和密码;
-            NSArray * accArr = [SSKeychain accountsForService:@"haihejinrong"];
+            NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
             for (int i=0; i<accArr.count; i++) {
                 NSDictionary * accDic  = accArr[i];
                 NSString * name = [accDic objectForKey:@"acct"];
-                [SSKeychain deletePasswordForService:@"haihejinrong" account:name];
+                [SSKeychain deletePasswordForService:@"ronglian" account:name];
             }
             
-            if([SSKeychain setPassword:_passwordTF.text forService:@"haihejinrong" account:_nameTF.text]){
+            if([SSKeychain setPassword:_passwordTF.text forService:@"ronglian" account:_nameTF.text]){
                 if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {
                     [[ShowMessageView shareManager] showMessage:@"数据错误,请重试"];
                 }else{
-                    //                    [[HaiHeNetBridge sharedManager] userCenterRequestWithUserId:[datadic objectForKey:@"userId"] WithSuccess:^(NSString *respString, NSDictionary *datadic) {
-                    //                            if(!respString){
-                    //                            //为标的详情保存本地数据;
-                    //                            NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-                    //                            if ([[datadic objectForKey:@"sfrz"]isEqualToString:@"0"]) {
-                    //                                [userdefault setObject:@"yes" forKey:@"isrenzheng"];
-                    //                            }else{
-                    //                                [userdefault setObject:@"" forKey:@"isrenzheng"];
-                    //                            }
-                    //                            if ([[datadic objectForKey:@"pw"]isEqualToString:@"0"]) {
-                    //                                [userdefault setObject:@"yes" forKey:@"issetdealpw"];
-                    //                            }else{
-                    //                                [userdefault setObject:@"" forKey:@"issetdealpw"];
-                    //                            }
-                    //                            if ([[datadic objectForKey:@"isOldUser"]isEqualToString:@"1"]||[[datadic objectForKey:@"isOldUser"]isEqualToString:@"2"]) {
-                    //                                [userdefault setObject:@"yes" forKey:@"isolderuser"];
-                    //                            }else{
-                    //                                [userdefault setObject:@"" forKey:@"isolderuser"];
-                    //                            }
-                    //                            [userdefault setObject:[datadic objectForKey:@"regDatetime"] forKey:@"zhucetime"];
-                    //                            [userdefault setObject:[datadic objectForKey:@"tel"] forKey:@"phonestr"];
-                    //                            [userdefault setObject:[datadic objectForKey:@"userId"] forKey:@"Myuserid"];
-                    //                            [userdefault synchronize];
-                    //
-                    //
-                    //                            [self.navigationController popViewControllerAnimated:YES];
-                    //
-                    //                        }else{
-                    //                            [[ShowMessageView shareManager] showMessage:respString];
-                    //                        }
-                    //                    }];
                     NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
                     [userdefault setObject:[datadic objectForKey:@"userId"] forKey:@"Myuserid"];
                     
-                    NSLog(@"%@",datadic);
+                    //NSLog(@"%@",datadic);
                     
                     [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
                     [UserLoginStatus shareManager].username = _nameTF.text;
@@ -262,48 +231,18 @@
                             [[ShowMessageView shareManager] showMessage:respString];
                             }else{
                                     //保存用户名和密码;
-                            NSArray * accArr = [SSKeychain accountsForService:@"haihejinrong"];
+                            NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
                                     for (int i=0; i<accArr.count; i++) {
                                         NSDictionary * accDic  = accArr[i];
                                         NSString * name = [accDic objectForKey:@"acct"];
-                                        [SSKeychain deletePasswordForService:@"haihejinrong" account:name];
+                                        [SSKeychain deletePasswordForService:@"ronglian" account:name];
                                     }
         
-                    if([SSKeychain setPassword:_passwordTF.text forService:@"haihejinrong" account:_nameTF.text]){
+                                if([SSKeychain setPassword:_passwordTF.text forService:@"ronglian" account:_nameTF.text]){
                         if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {
                                 [[ShowMessageView shareManager] showMessage:@"数据错误,请重试"];
                         }else{
-//                    [[HaiHeNetBridge sharedManager] userCenterRequestWithUserId:[datadic objectForKey:@"userId"] WithSuccess:^(NSString *respString, NSDictionary *datadic) {
-//                            if(!respString){
-//                            //为标的详情保存本地数据;
-//                            NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-//                            if ([[datadic objectForKey:@"sfrz"]isEqualToString:@"0"]) {
-//                                [userdefault setObject:@"yes" forKey:@"isrenzheng"];
-//                            }else{
-//                                [userdefault setObject:@"" forKey:@"isrenzheng"];
-//                            }
-//                            if ([[datadic objectForKey:@"pw"]isEqualToString:@"0"]) {
-//                                [userdefault setObject:@"yes" forKey:@"issetdealpw"];
-//                            }else{
-//                                [userdefault setObject:@"" forKey:@"issetdealpw"];
-//                            }
-//                            if ([[datadic objectForKey:@"isOldUser"]isEqualToString:@"1"]||[[datadic objectForKey:@"isOldUser"]isEqualToString:@"2"]) {
-//                                [userdefault setObject:@"yes" forKey:@"isolderuser"];
-//                            }else{
-//                                [userdefault setObject:@"" forKey:@"isolderuser"];
-//                            }
-//                            [userdefault setObject:[datadic objectForKey:@"regDatetime"] forKey:@"zhucetime"];
-//                            [userdefault setObject:[datadic objectForKey:@"tel"] forKey:@"phonestr"];
-//                            [userdefault setObject:[datadic objectForKey:@"userId"] forKey:@"Myuserid"];
-//                            [userdefault synchronize];
-//                            
-//                                
-//                            [self.navigationController popViewControllerAnimated:YES];
-//                                
-//                        }else{
-//                            [[ShowMessageView shareManager] showMessage:respString];
-//                        }
-//                    }];
+
                             NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
                             [userdefault setObject:[datadic objectForKey:@"userId"] forKey:@"Myuserid"];
 
