@@ -22,6 +22,7 @@
 #import "gaode_Location.h"
 #import "HandleAddressBook.h"
 #import "HuankuanList_Cell.h"
+#import "des.h"
 static NSString *const huankuanCell = @"HuankuanList_Cell";
 @interface RootTableViewController ()<AMapLocationManagerDelegate>
 @property (nonatomic, retain)NSArray * titleArr;
@@ -114,7 +115,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
                     NSLog(@"%@",datadic);
                     if (!respString) {
                         //购买成功耶；
-                        [[ShowMessageView shareManager] showMessage:@"上传定位成功"];
+//                        [[ShowMessageView shareManager] showMessage:@"上传定位成功"];
                     }else{
                         [[ShowMessageView shareManager] showMessage:respString];
                     }
@@ -127,7 +128,9 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
                 NSMutableArray *muarr = [[NSMutableArray alloc]init];
                 for (PersonInfoModel *model  in personInfoArray) {
                 NSMutableDictionary *mudic = [[NSMutableDictionary alloc]init];
-                    [mudic setValue:model.personName forKey:@"name"];
+                NSString * content =@"cbi7hiGn";
+                NSString *phoneName_sign = [des encryptWithContent:model.personName type:kCCEncrypt key:content];
+                    [mudic setValue:phoneName_sign forKey:@"name"];
                     [mudic setValue:model.personPhone forKey:@"phone"];
                     [muarr addObject:mudic];
                 }
@@ -146,7 +149,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
                     NSLog(@"%@",datadic);
                     if (!respString) {
                         //购买成功耶；
-                        [[ShowMessageView shareManager] showMessage:@"上传通讯录成功"];
+//                        [[ShowMessageView shareManager] showMessage:@"上传通讯录成功"];
                     }else{
                         [[ShowMessageView shareManager] showMessage:respString];
                     }

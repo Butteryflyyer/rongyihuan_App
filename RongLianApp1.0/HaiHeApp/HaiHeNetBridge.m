@@ -1232,7 +1232,7 @@
 //    NSString *phonestr = [self dictionaryToJson:@{@"phonelist":phonelist}];
 
     NSString *phoneliststr = [self arrayToJsonStringWitharr:phonelist];
-    NSString * Message = [NSString stringWithFormat:@"%@%@%@%@%@",VERSION,methodStr,userid,phoneliststr,PHONETYPE];
+    NSString * Message = [NSString stringWithFormat:@"%@%@%@%@",VERSION,methodStr,userid,PHONETYPE];
     //数字签名；
     //    RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
     //    NSString * signStr = [rsa signTheDataSHA1WithRSA:Message];
