@@ -18,6 +18,11 @@
 #import "DESEncryptFile.h"
 #import "HandleAddressBook.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import "SlideRootViewController.h"
+#import "Shenhe_Progress_Vc.h"
+#import "LoginViewController.h"
+#import "RootNavigationController.h"
+#import "leftMain_Vc.h"
 @interface AppDelegate ()
 
 @end
@@ -28,6 +33,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    Shenhe_Progress_Vc *shenhe_main = [[Shenhe_Progress_Vc alloc]init];
+    
+    leftMain_Vc *leftmain = [[leftMain_Vc alloc]init];
+    
+    RootNavigationController *ncMain = [[RootNavigationController alloc]initWithRootViewController:shenhe_main];
+     RootNavigationController *ncLeft = [[RootNavigationController alloc]initWithRootViewController:leftmain];
+    SlideRootViewController *vc = [[SlideRootViewController alloc]initWithLeftVC:ncLeft mainVC:ncMain slideTranslationX:200];
+    
+    self.window.rootViewController = vc;
 
 
      [AMapServices sharedServices].apiKey = @"64042588deacc84669e9a718e0c9c481";
@@ -65,6 +83,7 @@
                             }else{
                             [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
                             [UserLoginStatus shareManager].username = usernameStr;
+                                
                             }
                             }
                     }
@@ -72,10 +91,17 @@
 
         }else{
             //修改密码了;
+            
         }
     }else{
         //新用户;
+        
     }
+    
+  
+    
+    
+    
         NSLog(@"%@",[UserLoginStatus shareManager].userid);
     
 //    //装过卸载后的问题

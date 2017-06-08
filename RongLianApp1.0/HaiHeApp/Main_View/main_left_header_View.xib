@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="main_left_header_View">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-bq-8sw">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="3KT-Lf-HJH"/>
+                        <constraint firstAttribute="width" constant="40" id="jrI-FE-hNJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18518989539" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vly-zO-mKo">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="SCK-l9-NLk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vly-zO-mKo" firstAttribute="top" secondItem="mnG-bq-8sw" secondAttribute="bottom" constant="5" id="YL8-1q-faZ"/>
+                <constraint firstItem="mnG-bq-8sw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cCS-96-lvE"/>
+                <constraint firstItem="vly-zO-mKo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dGD-jW-RdW"/>
+                <constraint firstItem="mnG-bq-8sw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="sGq-QX-eJd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-31" y="-216"/>
+        </view>
+    </objects>
+</document>

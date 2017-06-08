@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+//    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:177/255.0 green:25/255.0 blue:25/255.0 alpha:1];
 //    self.navigationController.navigationBar.translucent = YES;//    Bar的模糊效果，默认为YES
 //    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
@@ -30,6 +31,7 @@
         FirstStartViewController * firstVC = [[FirstStartViewController alloc] init];
         [self presentViewController:firstVC animated:YES completion:nil];
     }
+    
 }
 
 
