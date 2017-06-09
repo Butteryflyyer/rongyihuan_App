@@ -1259,4 +1259,68 @@
 
 }
 
+#pragma mark -- 获取公司说明
+-(void)getCompanyIntorduceWithUserid:(NSString *)userid WithSuccess:(ReturnBlock)retureBlock{
+
+    [self getcompanyIntroduceWithUserid:userid WithSuccess:^(NSDictionary *dic, NSString *errorString) {
+        if(errorString){
+            retureBlock(errorString,nil);
+        }else{
+            if([dic objectForKey:@"messageType"]&&[dic objectForKey:@"respCode"]&&[dic objectForKey:@"userId"]){
+                NSString * verifyStr = [NSString stringWithFormat:@"%@%@%@",[dic objectForKey:@"messageType"],[dic objectForKey:@"respCode"],[dic objectForKey:@"userId"]];
+                //验证签名；
+                //                RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
+                //                BOOL isTrue = [rsa rsaSHA1VerifyData:[verifyStr dataUsingEncoding:NSUTF8StringEncoding] withSignature:[NSData dataWithBase64EncodedString:[dic objectForKey:@"signValue"]]];
+                NSLog(@"%@",[des encryptWithContent:[dic objectForKey:@"signValue"] type:kCCDecrypt key:@"cbi7hiGn"]);
+                BOOL isTrue = [verifyStr isEqual:[des encryptWithContent:[dic objectForKey:@"signValue"] type:kCCDecrypt key:@"cbi7hiGn"]];
+                if(isTrue){
+                    //验证签名成功；
+                    if([[dic objectForKey:@"respCode"] isEqualToString:@"000"]){
+                        retureBlock(nil,dic);
+                    }else{
+                        retureBlock([dic objectForKey:@"respCodeDesc"],nil);
+                    }
+                }else{
+                    //验证签名失败；
+                    retureBlock(@"验证签名失败",nil);
+                }
+            }else{
+                retureBlock(dic[@"respCodeDesc"],nil);
+            }}
+
+        
+    }];
+    
+}
+-(void)getcompanyIntroduceWithUserid:(NSString *)userid WithSuccess:(SignBlock)signData{
+    //格式化处理数据；
+    NSString * methodStr = @"GetRYHSoftwareIntroduce";
+    //    NSString *phonestr = [self dictionaryToJson:@{@"phonelist":phonelist}];
+    
+    NSString * Message = [NSString stringWithFormat:@"%@%@%@%@",VERSION,methodStr,userid,PHONETYPE];
+    //数字签名；
+    //    RSAEncryptor * rsa = [[RSAEncryptor alloc] init];
+    //    NSString * signStr = [rsa signTheDataSHA1WithRSA:Message];
+    NSString * content =@"cbi7hiGn";
+    
+    NSString *signStr = [des encryptWithContent:Message type:kCCEncrypt key:content];
+    
+
+    NSDictionary *dic = @{@"version":VERSION,@"messageType":methodStr,@"userId":userid,@"phoneType":PHONETYPE,@"signValue":signStr};
+    
+    NSString *sendMessage = [self dictionaryToJson:dic];
+    
+    NSLog(@"%@",sendMessage);
+    //    NSString * sendMessage = [NSString stringWithFormat:@"{\"version\":\"%@\",\"messageType\":\"%@\",\"userId\":\"%@\",%@,\"phoneType\":\"%@\",\"signValue\":\"%@\"}",VERSION,methodStr,userid,phonestr,PHONETYPE,signStr];
+    //发送网络请求；
+    HaiHeNetworking * net = [HaiHeNetworking sharedHaiheNet];
+    
+    [net sendRequestWithSendMessage:sendMessage WithSuccess:^(NSDictionary *dic,NSString *errorCode) {
+        NSLog(@"接收到的数据为:%@",dic);
+        signData(dic,errorCode);
+    }];
+    
+}
+
+
 @end

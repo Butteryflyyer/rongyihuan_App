@@ -60,6 +60,8 @@
     if (accoutArr&&accoutArr.count>0) {
         NSDictionary * usermessageDic = accoutArr[0];
         NSString * usernameStr = [usermessageDic objectForKey:@"acct"];
+        [UserLoginStatus shareManager].username = usernameStr;
+        [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_ShuaXinPhone object:nil];
         NSString * passwordStr = [SSKeychain passwordForService:@"ronglian" account:usernameStr];
         if (passwordStr) {
             //登录;
@@ -83,6 +85,7 @@
                             }else{
                             [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
                             [UserLoginStatus shareManager].username = usernameStr;
+                   
                                 
                             }
                             }

@@ -32,7 +32,7 @@
     self = [super init];
     if (self) {
     
-        
+ 
         // 默认为200宽度，小于100为100，大于200为200
         _slideTranslationX = 200;
         
@@ -69,7 +69,6 @@
     [self.view addGestureRecognizer:pan];
     
 
-    
 }
 /**
  *  打开抽屉
@@ -93,7 +92,7 @@
         [UIView animateWithDuration:kAnimationDuration animations:^{
             [self.mainV.view setX:transX];
             self.mainV.view.alpha = (kScreenWidth - transX * 0.5) / kScreenWidth * 1.0f;
-            CGFloat scale =  1 - 0.10 * transX / _slideTranslationX;
+            CGFloat scale =  1 - 0.010 * transX / _slideTranslationX;
             self.leftV.view.transform = CGAffineTransformMakeScale(scale, scale);
             
         } completion:^(BOOL finished) {
@@ -110,9 +109,10 @@
     } else {
         [self.mainV.view setX:transX];
         self.mainV.view.alpha = (kScreenWidth - transX * 0.5) / kScreenWidth * 1.0f;
-        CGFloat scale =  1 - 0.10 * transX / _slideTranslationX;
+//        CGFloat scale =  1 - 0.10 * transX / _slideTranslationX;
+          CGFloat scale =  1 - 0.010 * transX / _slideTranslationX;
         self.leftV.view.transform = CGAffineTransformMakeScale(scale, scale);
-        
+        self.view.backgroundColor = _COLOR_RGB(0xf5f5f5);
         if (transX == _slideTranslationX) {
             [self addCover];
         } else {
@@ -183,6 +183,8 @@ int transX = 0;
     
     UIButton *button = [[UIButton alloc] init];
     button.tag = 101;
+    [button setBackgroundColor:[UIColor blackColor]];
+    button.alpha = 0.5;
     [self.mainV.view addSubview:button];
     [button setFrame:self.mainV.view.bounds];
     [button addTarget:self action:@selector(backBtnTouch:) forControlEvents:UIControlEventTouchUpInside];

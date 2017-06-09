@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface leftMain_Vc : UIViewController
+@interface leftMain_Vc : FatherViewController
 
 @end

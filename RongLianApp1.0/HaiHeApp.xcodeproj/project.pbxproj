@@ -153,10 +153,6 @@
 		BD978FDB1EE9493B00D0E85D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = BD978FD91EE9493B00D0E85D /* UIView+Frame.m */; };
 		BD978FDE1EE9497300D0E85D /* Shenhe_Progress_Vc.m in Sources */ = {isa = PBXBuildFile; fileRef = BD978FDD1EE9497300D0E85D /* Shenhe_Progress_Vc.m */; };
 		BD978FE11EE94DA500D0E85D /* leftMain_Vc.m in Sources */ = {isa = PBXBuildFile; fileRef = BD978FE01EE94DA500D0E85D /* leftMain_Vc.m */; };
-		BD978FE81EE9541A00D0E85D /* main_left_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD978FE61EE9541A00D0E85D /* main_left_Cell.m */; };
-		BD978FE91EE9541A00D0E85D /* main_left_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD978FE71EE9541A00D0E85D /* main_left_Cell.xib */; };
-		BD978FEC1EE9566300D0E85D /* main_left_header_View.m in Sources */ = {isa = PBXBuildFile; fileRef = BD978FEB1EE9566300D0E85D /* main_left_header_View.m */; };
-		BD978FEE1EE9567B00D0E85D /* main_left_header_View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD978FED1EE9567B00D0E85D /* main_left_header_View.xib */; };
 		BDBE99271ED2C1630062401D /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBE99261ED2C1630062401D /* AMapFoundationKit.framework */; };
 		BDBE99291ED2C16B0062401D /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBE99281ED2C16B0062401D /* AMapLocationKit.framework */; };
 		BDBE99331ED2C1930062401D /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBE992C1ED2C1930062401D /* ChineseInclude.m */; };
@@ -165,6 +161,18 @@
 		BDBE993A1ED2C1C20062401D /* gaode_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBE99391ED2C1C20062401D /* gaode_Location.m */; };
 		BDBE99401ED30D290062401D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBE993F1ED30D290062401D /* libc++.tbd */; };
 		BDBE99421ED30D320062401D /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBE99411ED30D320062401D /* libstdc++.6.0.9.tbd */; };
+		BDE0F7FF1EEA64C900D67864 /* Rongyihuan_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F7FE1EEA64C900D67864 /* Rongyihuan_Tools.m */; };
+		BDE0F8021EEA651200D67864 /* Rongyihuan_Tools+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F8011EEA651200D67864 /* Rongyihuan_Tools+Alert.m */; };
+		BDE0F80A1EEA737500D67864 /* Rongyihuan_Tools+String.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F8091EEA737500D67864 /* Rongyihuan_Tools+String.m */; };
+		BDE0F8171EEA829E00D67864 /* ComponyIntroduce_View.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F80E1EEA829E00D67864 /* ComponyIntroduce_View.m */; };
+		BDE0F8181EEA829E00D67864 /* ComponyIntroduce_View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE0F80F1EEA829E00D67864 /* ComponyIntroduce_View.xib */; };
+		BDE0F8191EEA829E00D67864 /* main_left_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F8111EEA829E00D67864 /* main_left_Cell.m */; };
+		BDE0F81A1EEA829E00D67864 /* main_left_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE0F8121EEA829E00D67864 /* main_left_Cell.xib */; };
+		BDE0F81B1EEA829E00D67864 /* main_left_header_View.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F8141EEA829E00D67864 /* main_left_header_View.m */; };
+		BDE0F81C1EEA829E00D67864 /* main_left_header_View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE0F8151EEA829E00D67864 /* main_left_header_View.xib */; };
+		BDE0F81F1EEA82FE00D67864 /* Main_Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F81E1EEA82FE00D67864 /* Main_Jump.m */; };
+		BDE0F8231EEAA1CF00D67864 /* Shenhe_Progress_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0F8211EEAA1CF00D67864 /* Shenhe_Progress_Cell.m */; };
+		BDE0F8241EEAA1CF00D67864 /* Shenhe_Progress_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE0F8221EEAA1CF00D67864 /* Shenhe_Progress_Cell.xib */; };
 		D5354C440445F25373A6A1DA /* libPods-HaiHeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7D8C5CE4B594DC7EA089E1 /* libPods-HaiHeApp.a */; };
 		DBD9699C3538A48A6B3E7603 /* libPods-HaiHeAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6FF40983ACB3B675CBADF3 /* libPods-HaiHeAppUITests.a */; };
 /* End PBXBuildFile section */
@@ -459,12 +467,6 @@
 		BD978FDF1EE94DA500D0E85D /* leftMain_Vc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftMain_Vc.h; sourceTree = "<group>"; };
 		BD978FE01EE94DA500D0E85D /* leftMain_Vc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftMain_Vc.m; sourceTree = "<group>"; };
 		BD978FE31EE9523F00D0E85D /* Rongyihuan.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rongyihuan.pch; sourceTree = "<group>"; };
-		BD978FE51EE9541A00D0E85D /* main_left_Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_left_Cell.h; sourceTree = "<group>"; };
-		BD978FE61EE9541A00D0E85D /* main_left_Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main_left_Cell.m; sourceTree = "<group>"; };
-		BD978FE71EE9541A00D0E85D /* main_left_Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main_left_Cell.xib; sourceTree = "<group>"; };
-		BD978FEA1EE9566300D0E85D /* main_left_header_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_left_header_View.h; sourceTree = "<group>"; };
-		BD978FEB1EE9566300D0E85D /* main_left_header_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main_left_header_View.m; sourceTree = "<group>"; };
-		BD978FED1EE9567B00D0E85D /* main_left_header_View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main_left_header_View.xib; sourceTree = "<group>"; };
 		BD978FEF1EE95B3800D0E85D /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		BDBE99261ED2C1630062401D /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		BDBE99281ED2C16B0062401D /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
@@ -478,6 +480,26 @@
 		BDBE99391ED2C1C20062401D /* gaode_Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gaode_Location.m; sourceTree = "<group>"; };
 		BDBE993F1ED30D290062401D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		BDBE99411ED30D320062401D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		BDE0F7FD1EEA64C900D67864 /* Rongyihuan_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rongyihuan_Tools.h; sourceTree = "<group>"; };
+		BDE0F7FE1EEA64C900D67864 /* Rongyihuan_Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rongyihuan_Tools.m; sourceTree = "<group>"; };
+		BDE0F8001EEA651200D67864 /* Rongyihuan_Tools+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rongyihuan_Tools+Alert.h"; sourceTree = "<group>"; };
+		BDE0F8011EEA651200D67864 /* Rongyihuan_Tools+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rongyihuan_Tools+Alert.m"; sourceTree = "<group>"; };
+		BDE0F8081EEA737500D67864 /* Rongyihuan_Tools+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rongyihuan_Tools+String.h"; sourceTree = "<group>"; };
+		BDE0F8091EEA737500D67864 /* Rongyihuan_Tools+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rongyihuan_Tools+String.m"; sourceTree = "<group>"; };
+		BDE0F80D1EEA829E00D67864 /* ComponyIntroduce_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponyIntroduce_View.h; sourceTree = "<group>"; };
+		BDE0F80E1EEA829E00D67864 /* ComponyIntroduce_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponyIntroduce_View.m; sourceTree = "<group>"; };
+		BDE0F80F1EEA829E00D67864 /* ComponyIntroduce_View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComponyIntroduce_View.xib; sourceTree = "<group>"; };
+		BDE0F8101EEA829E00D67864 /* main_left_Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_left_Cell.h; sourceTree = "<group>"; };
+		BDE0F8111EEA829E00D67864 /* main_left_Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main_left_Cell.m; sourceTree = "<group>"; };
+		BDE0F8121EEA829E00D67864 /* main_left_Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main_left_Cell.xib; sourceTree = "<group>"; };
+		BDE0F8131EEA829E00D67864 /* main_left_header_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_left_header_View.h; sourceTree = "<group>"; };
+		BDE0F8141EEA829E00D67864 /* main_left_header_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main_left_header_View.m; sourceTree = "<group>"; };
+		BDE0F8151EEA829E00D67864 /* main_left_header_View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main_left_header_View.xib; sourceTree = "<group>"; };
+		BDE0F81D1EEA82FE00D67864 /* Main_Jump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main_Jump.h; sourceTree = "<group>"; };
+		BDE0F81E1EEA82FE00D67864 /* Main_Jump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Main_Jump.m; sourceTree = "<group>"; };
+		BDE0F8201EEAA1CF00D67864 /* Shenhe_Progress_Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shenhe_Progress_Cell.h; sourceTree = "<group>"; };
+		BDE0F8211EEAA1CF00D67864 /* Shenhe_Progress_Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shenhe_Progress_Cell.m; sourceTree = "<group>"; };
+		BDE0F8221EEAA1CF00D67864 /* Shenhe_Progress_Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shenhe_Progress_Cell.xib; sourceTree = "<group>"; };
 		C05CE30366FF491749D7C8EF /* Pods-HaiHeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaiHeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HaiHeApp/Pods-HaiHeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CA6E0BD2E1E7E1DC29DAC29E /* Pods-HaiHeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaiHeAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HaiHeAppTests/Pods-HaiHeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E0FC4F646C94CDC875CFF0CB /* Pods-HaiHeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaiHeAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HaiHeAppUITests/Pods-HaiHeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -806,9 +828,9 @@
 				BD978FDD1EE9497300D0E85D /* Shenhe_Progress_Vc.m */,
 				BD978FDF1EE94DA500D0E85D /* leftMain_Vc.h */,
 				BD978FE01EE94DA500D0E85D /* leftMain_Vc.m */,
-				BD978FE41EE953F000D0E85D /* Main_View */,
 				BD978FE31EE9523F00D0E85D /* Rongyihuan.pch */,
 				BD978FEF1EE95B3800D0E85D /* Tools.h */,
+				BDE0F80B1EEA829E00D67864 /* Main */,
 				BD978FD51EE9493B00D0E85D /* SlideViewController */,
 				725BA7791BB38F9000635293 /* Main.storyboard */,
 				725BA77C1BB38F9000635293 /* Assets.xcassets */,
@@ -1013,6 +1035,12 @@
 			children = (
 				BD571C3A1ED3FCFC00038CC3 /* NSArray+Log.h */,
 				BD571C3B1ED3FCFC00038CC3 /* NSArray+Log.m */,
+				BDE0F7FD1EEA64C900D67864 /* Rongyihuan_Tools.h */,
+				BDE0F7FE1EEA64C900D67864 /* Rongyihuan_Tools.m */,
+				BDE0F8081EEA737500D67864 /* Rongyihuan_Tools+String.h */,
+				BDE0F8091EEA737500D67864 /* Rongyihuan_Tools+String.m */,
+				BDE0F8001EEA651200D67864 /* Rongyihuan_Tools+Alert.h */,
+				BDE0F8011EEA651200D67864 /* Rongyihuan_Tools+Alert.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -1026,19 +1054,6 @@
 				BD978FD91EE9493B00D0E85D /* UIView+Frame.m */,
 			);
 			path = SlideViewController;
-			sourceTree = "<group>";
-		};
-		BD978FE41EE953F000D0E85D /* Main_View */ = {
-			isa = PBXGroup;
-			children = (
-				BD978FE51EE9541A00D0E85D /* main_left_Cell.h */,
-				BD978FE61EE9541A00D0E85D /* main_left_Cell.m */,
-				BD978FE71EE9541A00D0E85D /* main_left_Cell.xib */,
-				BD978FEA1EE9566300D0E85D /* main_left_header_View.h */,
-				BD978FEB1EE9566300D0E85D /* main_left_header_View.m */,
-				BD978FED1EE9567B00D0E85D /* main_left_header_View.xib */,
-			);
-			path = Main_View;
 			sourceTree = "<group>";
 		};
 		BDBE992A1ED2C1920062401D /* address_book_Manager */ = {
@@ -1074,6 +1089,43 @@
 				3F6FF40983ACB3B675CBADF3 /* libPods-HaiHeAppUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDE0F80B1EEA829E00D67864 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BDE0F80C1EEA829E00D67864 /* Main_View */,
+				BDE0F8161EEA829E00D67864 /* Manager */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BDE0F80C1EEA829E00D67864 /* Main_View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE0F80D1EEA829E00D67864 /* ComponyIntroduce_View.h */,
+				BDE0F80E1EEA829E00D67864 /* ComponyIntroduce_View.m */,
+				BDE0F80F1EEA829E00D67864 /* ComponyIntroduce_View.xib */,
+				BDE0F8101EEA829E00D67864 /* main_left_Cell.h */,
+				BDE0F8111EEA829E00D67864 /* main_left_Cell.m */,
+				BDE0F8121EEA829E00D67864 /* main_left_Cell.xib */,
+				BDE0F8131EEA829E00D67864 /* main_left_header_View.h */,
+				BDE0F8141EEA829E00D67864 /* main_left_header_View.m */,
+				BDE0F8151EEA829E00D67864 /* main_left_header_View.xib */,
+				BDE0F8201EEAA1CF00D67864 /* Shenhe_Progress_Cell.h */,
+				BDE0F8211EEAA1CF00D67864 /* Shenhe_Progress_Cell.m */,
+				BDE0F8221EEAA1CF00D67864 /* Shenhe_Progress_Cell.xib */,
+			);
+			path = Main_View;
+			sourceTree = "<group>";
+		};
+		BDE0F8161EEA829E00D67864 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BDE0F81D1EEA82FE00D67864 /* Main_Jump.h */,
+				BDE0F81E1EEA82FE00D67864 /* Main_Jump.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1206,19 +1258,21 @@
 				72B0B8C11BD48B4E00144E03 /* SeverPrivate_key.p12 in Resources */,
 				72B0B8A91BD4887E00144E03 /* MyPublic_key.der in Resources */,
 				725BA7801BB38F9000635293 /* LaunchScreen.storyboard in Resources */,
-				BD978FE91EE9541A00D0E85D /* main_left_Cell.xib in Resources */,
 				72B0B8C21BD48B4E00144E03 /* SeverPublic_key.der in Resources */,
 				7238A3421BEDC86700F89860 /* PushConfig.plist in Resources */,
+				BDE0F81A1EEA829E00D67864 /* main_left_Cell.xib in Resources */,
 				722656BA1C8ED06400D726F1 /* rl_private_key.p12 in Resources */,
 				722656B81C8ED03800D726F1 /* rl2_public_key.der in Resources */,
 				72B0B8A81BD4887E00144E03 /* MyPrivate_key.p12 in Resources */,
-				BD978FEE1EE9567B00D0E85D /* main_left_header_View.xib in Resources */,
 				7226AEF51BD6447100B6012E /* MJRefresh.bundle in Resources */,
+				BDE0F81C1EEA829E00D67864 /* main_left_header_View.xib in Resources */,
 				725BA77D1BB38F9000635293 /* Assets.xcassets in Resources */,
 				BD8D015B1ED6AC4B0054020F /* HuankuanList_Cell.xib in Resources */,
+				BDE0F8181EEA829E00D67864 /* ComponyIntroduce_View.xib in Resources */,
 				725BA77B1BB38F9000635293 /* Main.storyboard in Resources */,
 				72B0B8C01BD48B4E00144E03 /* MyPublic_key.der in Resources */,
 				72B0B8AC1BD4887E00144E03 /* SeverPrivate_key.p12 in Resources */,
+				BDE0F8241EEAA1CF00D67864 /* Shenhe_Progress_Cell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1390,7 +1444,6 @@
 				7226565E1C88448C00D726F1 /* RegisterSuccessViewController.m in Sources */,
 				722656401C88037600D726F1 /* RootNavigationController.m in Sources */,
 				722656431C881C5200D726F1 /* RootTableViewController.m in Sources */,
-				BD978FE81EE9541A00D0E85D /* main_left_Cell.m in Sources */,
 				72B0B8A51BD4887E00144E03 /* AFURLResponseSerialization.m in Sources */,
 				7208A3851BF43A840018BC83 /* SDWebImageManager.m in Sources */,
 				722656761C8844F100D726F1 /* SafeSetTableViewController.m in Sources */,
@@ -1403,8 +1456,10 @@
 				722656921C88466A00D726F1 /* RechargeAgainTableViewController.m in Sources */,
 				721989F61BE36177007E4A04 /* SSKeychain.m in Sources */,
 				725BA7781BB38F9000635293 /* ViewController.m in Sources */,
+				BDE0F81B1EEA829E00D67864 /* main_left_header_View.m in Sources */,
 				722656581C88448C00D726F1 /* RegisterTableViewController.m in Sources */,
 				7226AEE81BD6447100B6012E /* MJRefreshBackFooter.m in Sources */,
+				BDE0F8021EEA651200D67864 /* Rongyihuan_Tools+Alert.m in Sources */,
 				722656A91C8846B900D726F1 /* FourLabelsTableViewCell.m in Sources */,
 				7208A3891BF43A840018BC83 /* UIImage+MultiFormat.m in Sources */,
 				722656951C88466A00D726F1 /* RechargeSuccessTableViewController.m in Sources */,
@@ -1413,6 +1468,7 @@
 				72B0B8A61BD4887E00144E03 /* AFURLSessionManager.m in Sources */,
 				BD978FDB1EE9493B00D0E85D /* UIView+Frame.m in Sources */,
 				722656591C88448C00D726F1 /* SeviceAgreementViewController.m in Sources */,
+				BDE0F8171EEA829E00D67864 /* ComponyIntroduce_View.m in Sources */,
 				7217FC921BECA0F9006D874D /* FirstStartViewController.m in Sources */,
 				BDBE99331ED2C1930062401D /* ChineseInclude.m in Sources */,
 				7208A3831BF43A840018BC83 /* SDWebImageDownloader.m in Sources */,
@@ -1421,6 +1477,7 @@
 				722656911C88466A00D726F1 /* RechargeTableViewController.m in Sources */,
 				7226AEF21BD6447100B6012E /* MJRefreshGifHeader.m in Sources */,
 				725152171BE5F9A200BCCDCB /* ShowMainScreanView.m in Sources */,
+				BDE0F8191EEA829E00D67864 /* main_left_Cell.m in Sources */,
 				7208A3861BF43A840018BC83 /* SDWebImagePrefetcher.m in Sources */,
 				725BA7B31BB39A9700635293 /* FatherViewController.m in Sources */,
 				721989F91BE361C4007E4A04 /* UserLoginStatus.m in Sources */,
@@ -1446,17 +1503,19 @@
 				7226565D1C88448C00D726F1 /* ForgetNextTableViewController.m in Sources */,
 				722656B31C89236B00D726F1 /* BackMoneyObj.m in Sources */,
 				BD3195B31CCDF45E004CA350 /* MD5Encryption.m in Sources */,
-				BD978FEC1EE9566300D0E85D /* main_left_header_View.m in Sources */,
 				BD978FE11EE94DA500D0E85D /* leftMain_Vc.m in Sources */,
 				72B0B8A41BD4887E00144E03 /* AFURLRequestSerialization.m in Sources */,
 				BD3195B61CCDFB3A004CA350 /* DESEncryptFile.m in Sources */,
+				BDE0F80A1EEA737500D67864 /* Rongyihuan_Tools+String.m in Sources */,
 				BD978FDA1EE9493B00D0E85D /* SlideRootViewController.m in Sources */,
 				7226AEEE1BD6447100B6012E /* MJRefreshAutoStateFooter.m in Sources */,
+				BDE0F7FF1EEA64C900D67864 /* Rongyihuan_Tools.m in Sources */,
 				7208A3841BF43A840018BC83 /* SDWebImageDownloaderOperation.m in Sources */,
 				72B0B8A11BD4887E00144E03 /* AFNetworkReachabilityManager.m in Sources */,
 				72B0B8A01BD4887E00144E03 /* AFHTTPSessionManager.m in Sources */,
 				722656961C88466A00D726F1 /* RechargeSuccessTableViewCell.m in Sources */,
 				72B0B8AA1BD4887E00144E03 /* NSData+Base64.m in Sources */,
+				BDE0F81F1EEA82FE00D67864 /* Main_Jump.m in Sources */,
 				BDBE993A1ED2C1C20062401D /* gaode_Location.m in Sources */,
 				7226AEE71BD6447100B6012E /* MJRefreshAutoFooter.m in Sources */,
 				7208A3881BF43A840018BC83 /* UIImage+GIF.m in Sources */,
@@ -1480,6 +1539,7 @@
 				725BA7CE1BB3D88000635293 /* FatherTableViewController.m in Sources */,
 				722656461C882CD900D726F1 /* RootTableViewCell.m in Sources */,
 				722656941C88466A00D726F1 /* RechargeObj.m in Sources */,
+				BDE0F8231EEAA1CF00D67864 /* Shenhe_Progress_Cell.m in Sources */,
 				7226AEF91BD6447100B6012E /* UIView+MJExtension.m in Sources */,
 				72B0B8BB1BD488C800144E03 /* Utility.m in Sources */,
 				7226567C1C8844F100D726F1 /* ChengeLoginPasswordTableViewController.m in Sources */,

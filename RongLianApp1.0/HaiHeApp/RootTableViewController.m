@@ -65,6 +65,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
     UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"seticon"] style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonItemBeTouched:)];
     rightItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightItem;
+    self.navigationController.navigationItem.hidesBackButton = YES;
     
     //去掉返回两个字
     UIBarButtonItem * backItem = [[UIBarButtonItem alloc] init];
@@ -72,6 +73,8 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
     backItem.title = @" ";
     
     [self.tableView registerNib:[UINib nibWithNibName:huankuanCell bundle:nil] forCellReuseIdentifier:huankuanCell];
+    
+//      [[Main_Jump shareManager] addNsnotion];
     
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getdataFromNetWork)];
 }

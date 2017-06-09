@@ -16,7 +16,9 @@
 #import "RootTableViewController.h"
 #import "SafeSetTableViewController.h"
 #import "Shenhe_Progress_Vc.h"
-@interface Shenhe_Progress_Vc ()
+#import "ComponyIntroduce_View.h"
+
+@interface Shenhe_Progress_Vc ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, retain)NSString * userId;
 @property(nonatomic,assign)NSInteger PostNum;//用来记录这一页的上传次数
 
@@ -27,49 +29,101 @@
 @property (nonatomic, assign)BOOL isRenZheng;
 @property (nonatomic, assign)BOOL isDealPW;
 
+@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,retain)NSMutableArray *dataSource;
 @end
 
 @implementation Shenhe_Progress_Vc
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UILabel * titleL = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+    titleL.text = @"审批进度";
+    titleL.textColor = [UIColor whiteColor];
+    self.navigationItem.titleView = titleL;
+    //判断是否登录;
+    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
+    NSString * myuserid = [userdefault objectForKey:@"Myuserid"];
+    _userId = myuserid;
+
     [self getdataFromNetWork];
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self getCompanyIntroduce];
+
       self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:177/255.0 green:25/255.0 blue:25/255.0 alpha:1];
     // Do any additional setup after loading the view.
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(Shenhe_Progress) name:@"Shenhe_Progress" object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(HuanQuan_Jihua) name:@"HuanQuan_Jihua" object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(Safe_Set) name:@"Safe_Set" object:nil];
-}
--(void)Shenhe_Progress{
-    [self.navigationController popViewControllerAnimated:NO];
-
+ 
     
-}
--(void)HuanQuan_Jihua{
-    [self.navigationController popViewControllerAnimated:NO];
-    RootTableViewController *rootvc = [[RootTableViewController alloc]init];
+    UIButton *leftbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftbtn setTitle:@"测滑" forState:UIControlStateNormal];
+    leftbtn.frame = CGRectMake(0, 0, 50, 20);
+    UIBarButtonItem *leftbarItem = [[UIBarButtonItem alloc]initWithCustomView:leftbtn];
+    self.navigationItem.leftBarButtonItem = leftbarItem;
     
-    [self.navigationController pushViewController:rootvc animated:YES];
-}
--(void)Safe_Set{
-   [self.navigationController popViewControllerAnimated:NO];
-    SafeSetTableViewController * safeVC = [[SafeSetTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-    _userId = [userdefault objectForKey:@"Myuserid"];
+    [[Main_Jump shareManager] addNsnotionWithView:self];
     
-
-    safeVC.userid = _userId;
-    safeVC.phonenum = _phoneNum;
-    safeVC.phoneStr = _phoneNum;
-    safeVC.zhuceTime = _zhuceTime;
-    safeVC.loginname = _loginName;
-    
-    [self.navigationController pushViewController:safeVC animated:YES];
-
+    [self initUI];
+    [self initdata];
+}
+-(void)initdata{
+    self.dataSource = [[NSMutableArray alloc]init];
+}
+-(void)initUI{
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, 200, 300) style:UITableViewStylePlain];
+    self.tableView.backgroundColor = _COLOR_RGB(0xf5f5f5);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.bounces = NO;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    [self.tableView registerNib:[UINib nibWithNibName:@"main_left_Cell" bundle:nil] forCellReuseIdentifier:@"main_left_Cell"];
+    [self.view addSubview:self.tableView];
+    self.tableView.tableFooterView = [[UIView alloc]init];
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataSource.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
 }
 
+#pragma mark -- 获取公司说明
+-(void)getCompanyIntroduce{
+    if (_userId) {
+        __weak Shenhe_Progress_Vc *weakself = self;
+      [[HaiHeNetBridge sharedManager] getCompanyIntorduceWithUserid:_userId WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+          if (!respString) {
+              NSLog(@"%@",datadic);
+//              NSString *Introduce = datadic[@"SoftwareIntroduce"];
+            NSString *introduce = @"监考老师打了肯定是拉快疯了会计法大数据路口的发生了空间进度反馈拉数据库";
+            [weakself addTishi:introduce];
+              
+          }else{
+              [[ShowMessageView shareManager] showMessage:respString];
+          }
+      }];
+    }
+}
+-(void)addTishi:(NSString *)introduce{
+    UIView *introduce_Back = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    introduce_Back.backgroundColor = [UIColor clearColor];
+    
+    CGFloat introduce_Height = [Rongyihuan_Tools heigtOfLabelForFromString:introduce fontSizeandLabelWidth:190 andFontSize:12];
+    
+    ComponyIntroduce_View *componyView = [[[NSBundle mainBundle]loadNibNamed:@"ComponyIntroduce_View" owner:self options:nil]firstObject];
+    componyView.ComponyDetail_Label.text =introduce;
+    
+    componyView.frame = CGRectMake(40, 40, 240, introduce_Height+110);
+    
+    componyView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+    
+    [introduce_Back addSubview:componyView];
+    [[UIApplication sharedApplication].keyWindow addSubview:introduce_Back];
 
+}
+#pragma mark --获取用户信息
 - (void)getdataFromNetWork{
     if (_userId) {
         [[HaiHeNetBridge sharedManager] backMoneyRequestWithUserId:_userId WithSuccess:^(NSString *respString, NSDictionary *datadic) {
@@ -80,6 +134,7 @@
                 _phoneNum = [datadic objectForKey:@"sjh"];
                 _zhuceTime = [datadic objectForKey:@"zcsj"];
                 _loginName = [datadic objectForKey:@"dlm"];
+                NSLog(@"%@,%@",_phoneNum,_loginName);
                 if (![[datadic objectForKey:@"jymm"]isEqualToString:@"0"]) {
                     _isDealPW = false;
                 }else{
@@ -143,15 +198,6 @@
                     [mudic setValue:model.personPhone forKey:@"phone"];
                     [muarr addObject:mudic];
                 }
-                //                for (NSInteger i =0; i < 20000; i++) {
-                //                NSMutableDictionary *mudic = [[NSMutableDictionary alloc]init];
-                //                    PersonInfoModel *model = [[PersonInfoModel alloc]init];
-                //                    model.personName = [NSString stringWithFormat:@"%ld",i];
-                //                    model.personPhone = [NSMutableArray arrayWithArray:@[[NSString stringWithFormat:@"%ld84332232",i]]];
-                //                                        [mudic setValue:model.personName forKey:@"name"];
-                //                                        [mudic setValue:model.personPhone forKey:@"phone"];
-                //                                        [muarr addObject:mudic];
-                //                }
                 
                 [[HaiHeNetBridge sharedManager]postPhoneListWitharr:muarr WithUserid:myuserid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                     NSLog(@"%@",respString);
@@ -173,7 +219,9 @@
     }
     
 }
-
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

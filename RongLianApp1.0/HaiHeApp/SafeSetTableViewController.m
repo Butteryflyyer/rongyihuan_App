@@ -312,7 +312,7 @@
             _banknameStr = [datadic objectForKey:@"ssyh"];
             _jiaoyimimaStr = [datadic objectForKey:@"jjmm"];
             _phonenumStr = [datadic objectForKey:@"sjh"];
-            _loginname = [datadic objectForKey:@"sjh"];
+//            _loginname = [datadic objectForKey:@"dlm"];
            
             if (![_nameandidcardStr isEqualToString:@""]&&![_nameandidcardStr isKindOfClass:[NSNull class]]) {
                 if (![_nameandidcardStr isKindOfClass:[NSNull class]]) {

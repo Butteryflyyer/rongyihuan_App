@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/RootTableViewController.m"
-            timestampString = "518434618.240056"
+            timestampString = "518686223.574057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "474"
-            endingLineNumber = "474"
+            startingLineNumber = "477"
+            endingLineNumber = "477"
             landmarkName = "@implementation RootTableViewController"
             landmarkType = "3">
          </BreakpointContent>

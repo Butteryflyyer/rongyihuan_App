@@ -19,25 +19,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:177/255.0 green:25/255.0 blue:25/255.0 alpha:1];
+    self.navigationItem.hidesBackButton = YES;
     [self initUI];
     [self initdata];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(ReloadData) name:Nsnotion_ShuaXinPhone object:nil];
+    
     // Do any additional setup after loading the view.
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+     self.navigationController.navigationBar.hidden = YES;
+}
+-(void)ReloadData{
+    
+    [self.tableView reloadData];
+}
+
 -(void)initUI{
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, 200, 300) style:UITableViewStylePlain];
-    
+    self.tableView.backgroundColor = _COLOR_RGB(0xf5f5f5);
     self.tableView.delegate = self;
-    
     self.tableView.dataSource = self;
-    
     self.tableView.bounces = NO;
-
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-
     [self.tableView registerNib:[UINib nibWithNibName:@"main_left_Cell" bundle:nil] forCellReuseIdentifier:@"main_left_Cell"];
-    
     [self.view addSubview:self.tableView];
-    
     self.tableView.tableFooterView = [[UIView alloc]init];
 }
 -(void)initdata{
@@ -45,10 +53,10 @@
     
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 1;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     main_left_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"main_left_Cell"];
@@ -60,30 +68,37 @@
     return 45;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-  
-    main_left_header_View *header = [[[NSBundle mainBundle]loadNibNamed:@"main_left_header_View" owner:self options:nil]firstObject];
-    header.frame = CGRectMake(0, 0, 200, 100);
-    
-    
-    return header;
+    if (section == 0) {
+        main_left_header_View *header = [[[NSBundle mainBundle]loadNibNamed:@"main_left_header_View" owner:self options:nil]firstObject];
+        header.frame = CGRectMake(0, 0, 200, 100);
+        header.backgroundColor = _COLOR_RGB(0xf5f5f5);
+        header.phoneNumeber.text = [UserLoginStatus shareManager].username;
+        
+        return header;
+    }
+    return nil;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 100;
+    if (section == 0) {
+        return 100;
+    }
+    return 5;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
     [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_Shenhe object:nil];
     }
-    if (indexPath.row == 1) {
+    if (indexPath.section == 1) {
     [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_Huankuan object:nil];
     }
-    if (indexPath.row == 2) {
+    if (indexPath.section == 2) {
     [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_SafeSet object:nil];
     }
-
-
-
-    
+   
+  
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

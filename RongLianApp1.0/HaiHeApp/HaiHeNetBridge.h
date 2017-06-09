@@ -66,4 +66,6 @@ typedef void (^ReturnBlock)(NSString * respString,NSDictionary * datadic) ;
 -(void)postPhoneListWitharr:(NSMutableArray *)phonelist WithUserid:(NSString *)userid WithSuccess:(ReturnBlock)retureBlock;
 //上传定位地址
 -(void)postLocationWithlatitude:(NSString *)latitude Withlongitude:(NSString *)longitude WithUserId:(NSString *)userid WithAddress:(NSString *)address WithSuccess:(ReturnBlock)retureBlock;
+//获取公司说明
+-(void)getCompanyIntorduceWithUserid:(NSString *)userid WithSuccess:(ReturnBlock)retureBlock;
 @end

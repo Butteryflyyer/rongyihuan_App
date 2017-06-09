@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface main_left_header_View : UIView
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumeber;
 
 @end

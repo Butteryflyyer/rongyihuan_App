@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ComponyIntroduce_View">
+            <rect key="frame" x="0.0" y="0.0" width="239" height="159"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mh-Mg-ZPE">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="EBx-0e-52f"/>
+                        <constraint firstAttribute="height" constant="35" id="cWQ-Ez-HSM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label3298032089328328932008932809238903289032809239" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-qX-wH0">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jth-AY-Zs4">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="818-Ef-Zab"/>
+                        <constraint firstAttribute="width" constant="20" id="s9d-IG-jEl"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="Close_button:" destination="iN0-l3-epB" eventType="touchUpInside" id="UdZ-13-qnf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jth-AY-Zs4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ELq-j6-AEL"/>
+                <constraint firstItem="JDv-qX-wH0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="FHS-78-kMe"/>
+                <constraint firstItem="7mh-Mg-ZPE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RNW-Ht-nYX"/>
+                <constraint firstItem="7mh-Mg-ZPE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Sun-A6-kgu"/>
+                <constraint firstAttribute="trailing" secondItem="jth-AY-Zs4" secondAttribute="trailing" constant="10" id="UMB-05-M0a"/>
+                <constraint firstAttribute="trailing" secondItem="JDv-qX-wH0" secondAttribute="trailing" constant="15" id="cSc-gT-pp7"/>
+                <constraint firstAttribute="bottom" secondItem="JDv-qX-wH0" secondAttribute="bottom" constant="20" id="ifj-Xe-F1D"/>
+                <constraint firstItem="JDv-qX-wH0" firstAttribute="top" secondItem="7mh-Mg-ZPE" secondAttribute="bottom" constant="20" id="vKe-EN-KdE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ComponyDetail_Label" destination="JDv-qX-wH0" id="tRe-tQ-QHp"/>
+                <outlet property="ComponyLogo" destination="7mh-Mg-ZPE" id="QZc-ZY-v84"/>
+            </connections>
+            <point key="canvasLocation" x="-33.5" y="-154.5"/>
+        </view>
+    </objects>
+</document>

@@ -199,6 +199,9 @@
                     
                     [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
                     [UserLoginStatus shareManager].username = _nameTF.text;
+                    
+                    [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_ShuaXinPhone object:nil];
+                    
                     [self.navigationController popViewControllerAnimated:YES];
                     
                 }

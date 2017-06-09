@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = More_bgcolor;
+    self.view.backgroundColor = _COLOR_RGB(0xf5f5f5);
     UIBarButtonItem * backItem = [[UIBarButtonItem alloc] init];
     self.navigationItem.backBarButtonItem = backItem;
     backItem.title = @" ";

@@ -22,6 +22,8 @@
 //    self.navigationController.navigationBar.translucent = YES;//    Bar的模糊效果，默认为YES
 //    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
+     self.navigationController.navigationBar.backItem.hidesBackButton = YES;
+;
 }
 
 - (void)viewDidAppear:(BOOL)animated{

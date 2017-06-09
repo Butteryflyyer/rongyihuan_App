@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface Shenhe_Progress_Vc : UIViewController
+#import "FatherViewController.h"
+@interface Shenhe_Progress_Vc : FatherViewController
 
 @end

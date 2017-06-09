@@ -23,14 +23,17 @@
 -(void)setIndexPath:(NSIndexPath *)IndexPath{
     _IndexPath = IndexPath;
     
-    if (IndexPath.row == 0) {
+    if (IndexPath.section == 0) {
         self.TitleLabel.text = @"审批进度";
+        self.left_Image.image = [UIImage imageNamed:@"侧滑_进度"];
     }
-    if (IndexPath.row == 1) {
+    if (IndexPath.section == 1) {
         self.TitleLabel.text = @"还款计划";
+        self.left_Image.image = [UIImage imageNamed:@"侧滑_计划"];
     }
-    if (IndexPath.row == 2) {
+    if (IndexPath.section == 2) {
         self.TitleLabel.text = @"设置";
+        self.left_Image.image = [UIImage imageNamed:@"侧滑_设置"];
     }
 }
 
