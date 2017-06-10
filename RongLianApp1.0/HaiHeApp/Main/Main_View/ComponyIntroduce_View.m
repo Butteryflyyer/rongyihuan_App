@@ -8,6 +8,11 @@
 
 #import "ComponyIntroduce_View.h"
 
+@interface ComponyIntroduce_View ()
+@property (weak, nonatomic) IBOutlet UIButton *colse_btn;
+
+@end
+
 @implementation ComponyIntroduce_View
 
 /*
@@ -17,6 +22,11 @@
     // Drawing code
 }
 */
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self.colse_btn setEnlargeEdgeWithTop:5 right:5 bottom:5 left:5];
+    
+}
 - (IBAction)Close_button:(id)sender {
     [self.superview removeFromSuperview];
     [self removeFromSuperview];

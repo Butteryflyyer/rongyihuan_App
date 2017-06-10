@@ -17,7 +17,8 @@ typedef void (^ReturnBlock)(NSString * respString,NSDictionary * datadic) ;
 //- (void)vertifyUsernameWithUserName:(NSString *)username WithSuccess:(SignBlock)signData;
 //判断手机接口;
 - (void)vertifyUsernameRequestWithUserName:(NSString *)username WithSuccess:(ReturnBlock)returnData;
-- (void)vertifyUserphoneRequestWithUserPhone:(NSString *)userphone WithSuccess:(ReturnBlock)returnData;
+
+- (void)vertifyUserphoneRequestWithUserPhone:(NSString *)userphone WithIdentity:(NSString *)identity WithSuccess:(ReturnBlock)returnData;
 //注册接口;
 - (void)UserregisterRequestWithUserName:(NSString *)username andWithUserPassword:(NSString *)password andWithUserPhone:(NSString *)userphone andInviteCode:(NSString *)invitecode WithSuccess:(ReturnBlock)returnData;
 //登录接口;
@@ -68,4 +69,8 @@ typedef void (^ReturnBlock)(NSString * respString,NSDictionary * datadic) ;
 -(void)postLocationWithlatitude:(NSString *)latitude Withlongitude:(NSString *)longitude WithUserId:(NSString *)userid WithAddress:(NSString *)address WithSuccess:(ReturnBlock)retureBlock;
 //获取公司说明
 -(void)getCompanyIntorduceWithUserid:(NSString *)userid WithSuccess:(ReturnBlock)retureBlock;
+//审核进度
+-(void)getShenhe_progressWithUserid:(NSString *)userid WithTel:(NSString *)tel WithSuccess:(ReturnBlock)retureBlock;
+//判断进入第几个页面
+-(void)goIntoSomePageWithUserid:(NSString *)userid WithTel:(NSString *)tel WithSuccess:(ReturnBlock)retureBlock;
 @end

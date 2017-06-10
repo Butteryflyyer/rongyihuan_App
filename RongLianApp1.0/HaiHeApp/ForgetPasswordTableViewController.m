@@ -321,12 +321,12 @@
         [[ShowMessageView shareManager] showMessage:@"手机号须为11位数字"];
     }else{
         //判断手机号存在与否;
-        [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_phoneStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_phoneStr WithIdentity:@"changepwd" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
             if(respString){
                 [[ShowMessageView shareManager] showMessage:respString];
             }else{
                 if([[datadic objectForKey:@"isExist"] isEqualToString:@"001"]){
-                    [[HaiHeNetBridge sharedManager] sendSmsModelRequestWithUserPhone:phhoneTF.text andVerifyType:@"108" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+                    [[HaiHeNetBridge sharedManager] sendSmsModelRequestWithUserPhone:phhoneTF.text andVerifyType:@"8" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                         if(respString){
                             [[ShowMessageView shareManager] showMessage:respString];
                         }else{
@@ -381,7 +381,7 @@
             [[ShowMessageView shareManager] showMessage:@"手机号须为11位数字"];
         }else{
             //判断手机号存在与否;
-            [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_phoneStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+            [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_phoneStr WithIdentity:@"changepwd" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                 if(respString){
                     [[ShowMessageView shareManager] showMessage:respString];
                 }else{

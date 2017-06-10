@@ -20,6 +20,9 @@
  */
 @property (nonatomic, weak)  UIViewController *mainV;
 
+
+@property(nonatomic,strong)UIPanGestureRecognizer *panGesture;
+
 /**
  *  构造方法 ： 初始化控制器
  *  @param leftController 左控制器

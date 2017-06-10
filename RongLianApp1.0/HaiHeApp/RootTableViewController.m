@@ -23,6 +23,8 @@
 #import "HandleAddressBook.h"
 #import "HuankuanList_Cell.h"
 #import "des.h"
+#import "Main_ComponyIntoduce.h"
+#import "noInfo_footer_View.h"
 static NSString *const huankuanCell = @"HuankuanList_Cell";
 @interface RootTableViewController ()<AMapLocationManagerDelegate>
 @property (nonatomic, retain)NSArray * titleArr;
@@ -53,7 +55,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     _isRenZheng = NO;
-    self.PostNum = 0;
+
     _titleArr = @[@"        贷款总额(元)",@"待还总额(元)"];
     _daikuanStr = _yueStr = _daihuanStr = @"0.00";
     UILabel * titleL = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
@@ -62,9 +64,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
     self.navigationItem.titleView = titleL;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:177/255.0 green:25/255.0 blue:25/255.0 alpha:1];
 
-    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"seticon"] style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonItemBeTouched:)];
-    rightItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = rightItem;
+
     self.navigationController.navigationItem.hidesBackButton = YES;
     
     //去掉返回两个字
@@ -76,95 +76,112 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
     
 //      [[Main_Jump shareManager] addNsnotion];
     
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getdataFromNetWork)];
-}
+//    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getdataFromNetWork)];
+    __weak RootTableViewController *weakself = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakself getdataFromNetWork];
+    }];
 
-- (void)rightButtonItemBeTouched:(id)sender{
-    SafeSetTableViewController * safeVC = [[SafeSetTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-    _userId = [userdefault objectForKey:@"Myuserid"];
     
-//    _phoneNum = @"18514529291";
-//    _zhuceTime = @"20150629111451";
-//    _loginName = @"18514529291";
-    safeVC.userid = _userId;
-    safeVC.phonenum = _phoneNum;
-    safeVC.phoneStr = _phoneNum;
-    safeVC.zhuceTime = _zhuceTime;
-    safeVC.loginname = _loginName;
-    
-    [self.navigationController pushViewController:safeVC animated:YES];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = NO;
+   
 
-    
-    //判断是否登录;
-    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-    NSString * myuserid = [userdefault objectForKey:@"Myuserid"];
-    _userId = myuserid;
-//    _isRenZheng = [userdefault objectForKey:@"isrenzheng"];
-    if (!myuserid||[myuserid isEqualToString:@""]) {
+    if ([UserLoginStatus shareManager].userid.length == 0) {
         LoginViewController * loginVC = [[LoginViewController alloc] init];
         [self.navigationController pushViewController:loginVC animated:YES];
     }else{
-        [self.tableView.header beginRefreshing];
-        if (self.PostNum == 0) {
-//            __weak LoginViewController *weakSelf = self;
-            [[gaode_Location shareInstance] getLocation:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
-                [[HaiHeNetBridge sharedManager]postLocationWithlatitude:[NSString stringWithFormat:@"%f",location.coordinate.latitude] Withlongitude:[NSString stringWithFormat:@"%f",location.coordinate.longitude] WithUserId:myuserid WithAddress:regeocode.formattedAddress WithSuccess:^(NSString *respString, NSDictionary *datadic) {
-                    NSLog(@"%@",respString);
-                    NSLog(@"%@",datadic);
-                    if (!respString) {
-                        //购买成功耶；
-//                        [[ShowMessageView shareManager] showMessage:@"上传定位成功"];
-                    }else{
-                        [[ShowMessageView shareManager] showMessage:respString];
+        
+        [self.tableView.mj_header beginRefreshing];
+        if ([UserLoginStatus shareManager].userid.length > 0) {
+            if ([Main_Jump shareManager].postNum_location_phone == 0 ) {
+                //            __weak LoginViewController *weakSelf = self;
+                [[gaode_Location shareInstance] getLocation:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
+                    [[HaiHeNetBridge sharedManager]postLocationWithlatitude:[NSString stringWithFormat:@"%f",location.coordinate.latitude] Withlongitude:[NSString stringWithFormat:@"%f",location.coordinate.longitude] WithUserId:[UserLoginStatus shareManager].userid WithAddress:regeocode.formattedAddress WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+                        NSLog(@"%@",respString);
+                        NSLog(@"%@",datadic);
+                        if (!respString) {
+                            //购买成功耶；
+                            //                        [[ShowMessageView shareManager] showMessage:@"上传定位成功"];
+                        }else{
+                            [[ShowMessageView shareManager] showMessage:respString];
+                        }
+                        
+                    }];
+                }];
+                
+                [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
+                    
+                    NSMutableArray *muarr = [[NSMutableArray alloc]init];
+                    for (PersonInfoModel *model  in personInfoArray) {
+                        NSMutableDictionary *mudic = [[NSMutableDictionary alloc]init];
+                        NSString * content =@"cbi7hiGn";
+                        NSString *phoneName_sign = [des encryptWithContent:model.personName type:kCCEncrypt key:content];
+                        [mudic setValue:phoneName_sign forKey:@"name"];
+                        [mudic setValue:model.personPhone forKey:@"phone"];
+                        [muarr addObject:mudic];
                     }
                     
+                    [[HaiHeNetBridge sharedManager]postPhoneListWitharr:muarr WithUserid:[UserLoginStatus shareManager].userid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+                        NSLog(@"%@",respString);
+                        NSLog(@"%@",datadic);
+                        if (!respString) {
+                            //购买成功耶；
+                            //                        [[ShowMessageView shareManager] showMessage:@"上传通讯录成功"];
+                        }else{
+                            [[ShowMessageView shareManager] showMessage:respString];
+                        }
+                        
+                    }];
                 }];
-            }];
+                [Main_Jump shareManager].postNum_location_phone = 1;
+            }
            
-            [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
-
-                NSMutableArray *muarr = [[NSMutableArray alloc]init];
-                for (PersonInfoModel *model  in personInfoArray) {
-                NSMutableDictionary *mudic = [[NSMutableDictionary alloc]init];
-                NSString * content =@"cbi7hiGn";
-                NSString *phoneName_sign = [des encryptWithContent:model.personName type:kCCEncrypt key:content];
-                    [mudic setValue:phoneName_sign forKey:@"name"];
-                    [mudic setValue:model.personPhone forKey:@"phone"];
-                    [muarr addObject:mudic];
-                }
-//                for (NSInteger i =0; i < 20000; i++) {
-//                NSMutableDictionary *mudic = [[NSMutableDictionary alloc]init];
-//                    PersonInfoModel *model = [[PersonInfoModel alloc]init];
-//                    model.personName = [NSString stringWithFormat:@"%ld",i];
-//                    model.personPhone = [NSMutableArray arrayWithArray:@[[NSString stringWithFormat:@"%ld84332232",i]]];
-//                                        [mudic setValue:model.personName forKey:@"name"];
-//                                        [mudic setValue:model.personPhone forKey:@"phone"];
-//                                        [muarr addObject:mudic];
-//                }
-                
-                [[HaiHeNetBridge sharedManager]postPhoneListWitharr:muarr WithUserid:myuserid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
-                    NSLog(@"%@",respString);
-                    NSLog(@"%@",datadic);
-                    if (!respString) {
-                        //购买成功耶；
-//                        [[ShowMessageView shareManager] showMessage:@"上传通讯录成功"];
-                    }else{
-                        [[ShowMessageView shareManager] showMessage:respString];
-                    }
-
-                }];
-            }];
-
+            
         }
-        self.PostNum++;
-//        [self waitForData];
+
+      //        [self waitForData];
 //        [self getdataFromNetWork];
     }
+    if ([UserLoginStatus shareManager].userid.length > 0) {
+        __weak RootTableViewController *weakself = self;
+        [[Main_ComponyIntoduce shareManager]goIntoMain:^(NSString *str) {
+            if ([str integerValue]== 1|| [str integerValue] == 0) {
+                
+                
+            }else{
+                [weakself leftBtnInit];
+            }
+            
+        } WithView:self];
+  
+    }
+    
+  
+}
+#pragma mark -- 左上角按钮
+-(void)leftBtnInit{
+    UIButton *leftbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftbtn setImage:[UIImage imageNamed:@"左上角-更多"] forState:UIControlStateNormal];
+    leftbtn.frame = CGRectMake(0, 0, 14.5, 2.5);
+    [leftbtn setEnlargeEdgeWithTop:10 right:2 bottom:5 left:10];
+    [leftbtn addTarget:self action:@selector(slideLeft:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftbarItem = [[UIBarButtonItem alloc]initWithCustomView:leftbtn];
+    self.navigationItem.leftBarButtonItem = leftbarItem;
+    
+}
+-(void)slideLeft:(UIButton *)btn{
+    
+    SlideRootViewController *slideVc =(SlideRootViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    [slideVc slideToLeft];
     
 }
 
@@ -188,9 +205,14 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
     return 1;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if (self.listdata.count == 0) {
+        return 0.01;
+    }
     
     return 10;
 }
@@ -203,6 +225,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+ 
     return 100;
 }
 
@@ -354,7 +377,7 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
                 if (!respString) {
                     //购买成功耶；
                     [[ShowMessageView shareManager] showMessage:@"还款成功"];
-                    [self.tableView.header beginRefreshing];
+                    [self.tableView.mj_header beginRefreshing];
                 }else{
                     [[ShowMessageView shareManager] showMessage:respString];
                 }
@@ -378,12 +401,14 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
 
 
 - (void)getdataFromNetWork{
-    if (_userId) {
-    [[HaiHeNetBridge sharedManager] backMoneyRequestWithUserId:_userId WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+    __weak typeof(self) weakSelf = self;
+    if ([UserLoginStatus shareManager].userid.length > 0) {
+    [[HaiHeNetBridge sharedManager] backMoneyRequestWithUserId:[UserLoginStatus shareManager].userid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        __strong typeof(self)strongSelf = weakSelf;
         if (_activityV) {
             [_activityV stopAnimating];
         }
-        [self.tableView.header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
         if (!respString) {
             _daikuanStr = [datadic objectForKey:@"zdk"];
             _yueStr = [datadic objectForKey:@"zhye"];
@@ -411,13 +436,18 @@ static NSString *const huankuanCell = @"HuankuanList_Cell";
                 BackMoneyObj * backmoney = [[BackMoneyObj alloc] initWithAttributes:attributes];
                 [mutablePosts addObject:backmoney];
             }
-            _listdata = [NSArray arrayWithArray:mutablePosts];
-            [self.tableView reloadData];
+            strongSelf.listdata = [NSArray arrayWithArray:mutablePosts];
+            
+          
+          dispatch_async(dispatch_get_main_queue(), ^{
+              [strongSelf.tableView reloadData];
+          });
+          
 
         }else{
             [[ShowMessageView shareManager] showMessage:respString];
         }
-
+ 
     }];
 
     }

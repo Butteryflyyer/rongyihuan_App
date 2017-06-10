@@ -10,7 +10,12 @@
 
 @interface Main_Jump : NSObject
 
-+(id)shareManager;
++(Main_Jump *)shareManager;
+
+@property(nonatomic,assign)NSInteger postNum_location_phone; 
+
+@property(nonatomic,strong)UIViewController *current;
+
 
 -(void)addNsnotionWithView:(UIViewController *)view;
 

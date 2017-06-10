@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Shenhe_Model.h"
 @interface Shenhe_Progress_Cell : UITableViewCell
+
+@property(nonatomic,strong)Shenhe_Model *shenheModel;
 
 @end

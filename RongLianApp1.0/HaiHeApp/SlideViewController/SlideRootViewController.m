@@ -67,7 +67,7 @@
     // 添加侧滑手势
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGest:)];
     [self.view addGestureRecognizer:pan];
-    
+    self.panGesture = pan;
 
 }
 /**
@@ -202,4 +202,9 @@ int transX = 0;
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
+
+
+
+
 @end

@@ -47,7 +47,15 @@
     
     self.window.rootViewController = vc;
 
-
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"UserName"]) {
+        [UserLoginStatus shareManager].username = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserName"];
+    }
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"Myuserid"]) {
+        [UserLoginStatus shareManager].userid = [[NSUserDefaults standardUserDefaults]objectForKey:@"Myuserid"];
+    }
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"userTel"]) {
+        [UserLoginStatus shareManager].userTel = [[NSUserDefaults standardUserDefaults]objectForKey:@"userTel"];
+    }
      [AMapServices sharedServices].apiKey = @"64042588deacc84669e9a718e0c9c481";
 //      __weak AppDelegate *weakSelf = self;
 //    [[gaode_Location shareInstance] getLocation:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
@@ -56,21 +64,24 @@
 //    [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
 //        
 //    }];
-    NSArray * accoutArr = [SSKeychain accountsForService:@"ronglian"];
-    if (accoutArr&&accoutArr.count>0) {
-        NSDictionary * usermessageDic = accoutArr[0];
-        NSString * usernameStr = [usermessageDic objectForKey:@"acct"];
-        [UserLoginStatus shareManager].username = usernameStr;
-        [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_ShuaXinPhone object:nil];
-        NSString * passwordStr = [SSKeychain passwordForService:@"ronglian" account:usernameStr];
-        if (passwordStr) {
-            //登录;
-            [[HaiHeNetBridge sharedManager] userLoginRequestWithUserName:usernameStr andWithPassword:passwordStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
-                if(respString){
-                }else{
-                    //保存用户名和密码;
+    if ([UserLoginStatus shareManager].userid.length > 0) {
+        NSArray * accoutArr = [SSKeychain accountsForService:@"ronglian"];
+        NSLog(@"%@",accoutArr);
+        if (accoutArr&&accoutArr.count>0) {
+            NSDictionary * usermessageDic = accoutArr[0];
+            NSString * usernameStr = [usermessageDic objectForKey:@"acct"];
+            [UserLoginStatus shareManager].username = usernameStr;
+ 
+            NSString * passwordStr = [SSKeychain passwordForService:@"ronglian" account:usernameStr];
+            if (passwordStr) {
+                //登录;
+                [[HaiHeNetBridge sharedManager] userLoginRequestWithUserName:usernameStr andWithPassword:passwordStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+                    if(respString){
+                        [[Rongyihuan_Tools getCurrentVC] presentViewController:[[LoginViewController alloc]init] animated:NO completion:nil];
+                    }else{
+                        //保存用户名和密码;
                         if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {
-                           
+                            
                         }else{
                             NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
                             if (![userdefault objectForKey:@"isfirststart1"]) {
@@ -82,24 +93,30 @@
                                     [userdefault setObject:@"10" forKey:@"haveshoushimima"];
                                     [userdefault setObject:@"" forKey:@"username_lock"];
                                 }
+                                 [self goIntoMain];
                             }else{
-                            [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
-                            [UserLoginStatus shareManager].username = usernameStr;
-                   
-                                
+                                [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
+                                [UserLoginStatus shareManager].username = usernameStr;
+                                [UserLoginStatus shareManager].userTel = [datadic objectForKey:@"userTel"];
+                                [self goIntoMain];
                             }
-                            }
+                            
+                            
+                        }
                     }
-            }];
-
+                }];
+                
+            }else{
+                //修改密码了;
+                
+            }
         }else{
-            //修改密码了;
+            //新用户;
             
         }
-    }else{
-        //新用户;
-        
+
     }
+    
     
   
     
@@ -157,6 +174,60 @@
     
   
     return YES;
+}
+
+#pragma mark -- 哪个是主页
+-(void)goIntoMain{
+/**
+ EnterPage = 1 首页为审核进度页面。EnterPage = 0  没有申请显示公司介绍弹框。 EnterPage = 2 还款计划表
+ 
+ */
+    __weak AppDelegate *weakSelf = self;
+    [[HaiHeNetBridge sharedManager]goIntoSomePageWithUserid:[UserLoginStatus shareManager].userid WithTel:[UserLoginStatus shareManager].userTel WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        if (respString) {
+            
+        }else{
+            NSLog(@"%@",datadic);
+            if ([datadic[@"EnterPage"] integerValue]==2) {
+                RootTableViewController *root_main = [[RootTableViewController alloc]init];
+                
+                leftMain_Vc *leftmain = [[leftMain_Vc alloc]init];
+                
+                RootNavigationController *ncMain = [[RootNavigationController alloc]initWithRootViewController:root_main];
+                RootNavigationController *ncLeft = [[RootNavigationController alloc]initWithRootViewController:leftmain];
+                SlideRootViewController *vc = [[SlideRootViewController alloc]initWithLeftVC:ncLeft mainVC:ncMain slideTranslationX:200];
+                
+                weakSelf.window.rootViewController = vc;
+                [[Main_Jump shareManager] addNsnotionWithView:root_main];
+
+            }else if ([datadic[@"EnterPage"] integerValue]==0){
+                Shenhe_Progress_Vc *shenhe_main = [[Shenhe_Progress_Vc alloc]init];
+                
+                leftMain_Vc *leftmain = [[leftMain_Vc alloc]init];
+                
+                RootNavigationController *ncMain = [[RootNavigationController alloc]initWithRootViewController:shenhe_main];
+                RootNavigationController *ncLeft = [[RootNavigationController alloc]initWithRootViewController:leftmain];
+                SlideRootViewController *vc = [[SlideRootViewController alloc]initWithLeftVC:ncLeft mainVC:ncMain slideTranslationX:200];
+                
+                weakSelf.window.rootViewController = vc;
+                [[Main_Jump shareManager] addNsnotionWithView:shenhe_main];
+
+            }else if ([datadic[@"EnterPage"] integerValue] == 1){
+                Shenhe_Progress_Vc *shenhe_main = [[Shenhe_Progress_Vc alloc]init];
+                
+                leftMain_Vc *leftmain = [[leftMain_Vc alloc]init];
+                
+                RootNavigationController *ncMain = [[RootNavigationController alloc]initWithRootViewController:shenhe_main];
+                RootNavigationController *ncLeft = [[RootNavigationController alloc]initWithRootViewController:leftmain];
+                SlideRootViewController *vc = [[SlideRootViewController alloc]initWithLeftVC:ncLeft mainVC:ncMain slideTranslationX:200];
+                
+                weakSelf.window.rootViewController = vc;
+                [[Main_Jump shareManager] addNsnotionWithView:shenhe_main];
+                [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_TanchuComponyIntroduce object:nil];
+
+            }
+        }
+    }];
 }
 
 

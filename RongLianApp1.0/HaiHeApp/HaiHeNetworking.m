@@ -24,7 +24,7 @@ static id _haiheNet;
     //真实地址：http://ryh.zyskcn.com:8092/WebService/RYH_Interface.asmx
     //测试地址：http://192.168.13.15:8007/WebService/RYH_Interface.asmx
     
-    static NSString * wsURL = @"http://192.168.13.15:8007/WebService/RYH_Interface.asmx";
+    static NSString * wsURL = @"http://ryh.zyskcn.com:8092/WebService/RYH_Interface.asmx";
 //    NSString *soapMessage = [NSString stringWithFormat:
 //                             @"<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
 //                            "<soap:Body>"

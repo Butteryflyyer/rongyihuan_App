@@ -244,7 +244,7 @@
     if (_sendyuyin) {
         [[ShowMessageView shareManager] showMessage:@"120秒内不能重复获取"];
     }else{
-        [[HaiHeNetBridge sharedManager] sendAudioSmsRequestWithUserPhone:_registerPhone andWithType:@"107" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        [[HaiHeNetBridge sharedManager] sendAudioSmsRequestWithUserPhone:_registerPhone andWithType:@"7" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
             if (!respString) {
                 [[ShowMessageView shareManager] showMessage:@"验证码已发送"];
                 _yanzhengStr = [datadic objectForKey:@"verifyCode"];
@@ -335,8 +335,9 @@
                     if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {
                         [[ShowMessageView shareManager] showMessage:@"数据错误,请重试"];
                     }else{
-                        [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
-                        [UserLoginStatus shareManager].username = _registerPhone;
+//                        [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
+//                        [UserLoginStatus shareManager].username = _registerPhone;
+//                        [UserLoginStatus shareManager].userTel = [datadic objectForKey:@"userTel"];
                     
                             NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
                             [userdefault setObject:_registerPhone forKey:@"phonestr"];

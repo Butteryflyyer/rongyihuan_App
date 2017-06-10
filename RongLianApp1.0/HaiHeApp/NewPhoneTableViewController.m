@@ -256,7 +256,7 @@
         [[ShowMessageView shareManager] showMessage:@"手机号须为11位数字"];
     }else{
         //验证手机号存在
-        [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_newphoneTF.text WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_newphoneTF.text WithIdentity:@"reg" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
             if(respString){
                 [[ShowMessageView shareManager] showMessage:respString];
             }else{
@@ -312,7 +312,7 @@
             [[ShowMessageView shareManager] showMessage:@"手机号须为11位数字"];
         }else{
             //验证手机号存在与否
-            [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_newphoneTF.text WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+            [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:_newphoneTF.text WithIdentity:@"reg" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                 if(respString){
                     [[ShowMessageView shareManager] showMessage:respString];
                 }else{

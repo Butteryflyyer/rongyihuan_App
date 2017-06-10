@@ -8,6 +8,9 @@
 
 #import "FatherViewController.h"
 #import "HaiheHeader.h"
+#import "SafeSetTableViewController.h"
+#import "leftMain_Vc.h"
+#import "SlideRootViewController.h"
 @interface FatherViewController ()
 
 @end
@@ -25,14 +28,30 @@
     NSDictionary * dict=[NSDictionary dictionaryWithObject:color forKey:UITextAttributeTextColor];
     self.navigationController.navigationBar.titleTextAttributes = dict;
     // Do any additional setup after loading the view.
+    
+    NSLog(@"%@",[self class]);
+    NSLog(@"%@",self);
+    
+    SlideRootViewController *slideVc = (SlideRootViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    if ([self isKindOfClass:[Shenhe_Progress_Vc class]] || [self isKindOfClass:[RootTableViewController class]]|| [self isKindOfClass:[SafeSetTableViewController class]] || [self isKindOfClass:[leftMain_Vc class]] || [self isKindOfClass:[SlideRootViewController class]])  {
+          slideVc.panGesture.enabled = YES;
+    }else{
+       slideVc.panGesture.enabled = NO;
+    }
+    
+    
 }
 - (void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBar.hidden = NO;
     self.tabBarController.tabBar.hidden = YES;
+    
+    
 }
 -(void)viewWillDisappear:(BOOL)animated{
     self.navigationController.navigationBar.hidden =NO;
     self.tabBarController.tabBar.hidden = NO;
+
     
 }
 

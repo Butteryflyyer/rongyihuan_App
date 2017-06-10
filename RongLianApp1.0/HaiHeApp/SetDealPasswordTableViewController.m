@@ -94,7 +94,7 @@
         if(!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidenti];
         }
-        NSString * usernameStr = [UserLoginStatus shareManager].username;
+        NSString * usernameStr = [UserLoginStatus shareManager].userTel;
         cell.textLabel.text = [NSString stringWithFormat:@"账户:%@",usernameStr];
         //cell.textLabel.textColor = [UIColor lightGrayColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

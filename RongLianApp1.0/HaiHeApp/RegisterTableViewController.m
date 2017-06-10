@@ -92,7 +92,7 @@
     UIButton * seviceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     seviceBtn.frame = CGRectMake(190, 0, 120, 40);
     //seviceBtn.backgroundColor = [UIColor greenColor];
-    [seviceBtn setTitle:@"《融联创投服务协议》" forState:UIControlStateNormal];
+    [seviceBtn setTitle:@"《融易还服务协议》" forState:UIControlStateNormal];
     [seviceBtn setTitleColor:nav_bgcolor  forState:UIControlStateNormal];
     seviceBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [seviceBtn addTarget:self action:@selector(seviceButtonBeTouch:) forControlEvents:UIControlEventTouchUpInside];
@@ -125,7 +125,7 @@
         [[ShowMessageView shareManager] showMessage:@"手机号不能为空"];
     }else{
     if([[RegularClass shareManager] isTelePhoneNumber:phoneStr]){
-        [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:phoneStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        [[HaiHeNetBridge sharedManager] vertifyUserphoneRequestWithUserPhone:phoneStr WithIdentity:@"reg" WithSuccess:^(NSString *respString, NSDictionary *datadic) {
             if(respString){
                 [[ShowMessageView shareManager] showMessage:respString];
             }else{

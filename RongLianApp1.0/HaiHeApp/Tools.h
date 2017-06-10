@@ -14,9 +14,12 @@
 #define Nsnotion_Huankuan @"HuanQuan_Jihua"
 #define Nsnotion_SafeSet @"Safe_Set"
 #define Nsnotion_ShuaXinPhone @"ShuaXinPhone"
+#define Nsnotion_TanchuComponyIntroduce @"TanchuComponyIntroduce"
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
+
+#define IMG(ImageName) [UIImage imageNamed:ImageName]
 
 #define _COLOR_RGB(rgbValue) [UIColor colorWith\
 Red     :(rgbValue & 0xFF0000)     / (float)0xFF0000 \

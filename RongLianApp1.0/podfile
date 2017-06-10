@@ -7,6 +7,8 @@ target 'HaiHeApp' do
 
   # Pods for HaiHeApp
 
+ pod ‘IQKeyboardManager’
+
   target 'HaiHeAppTests' do
     inherit! :search_paths
     # Pods for testing

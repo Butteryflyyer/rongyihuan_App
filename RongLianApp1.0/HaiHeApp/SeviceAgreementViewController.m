@@ -18,13 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"融联服务协议";
+    self.title = @"融易还服务协议";
     WKWebView * wkV = [[WKWebView alloc] initWithFrame:self.view.bounds];
     _wkV = wkV;
     
     ////测试地址：http://192.168.12.196:8080/app_webservice/webservice/publicRequest?wsdl
     //http://223.202.60.29/app_webservice/webservice/publicRequest?wsdl
-    [wkV loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://223.202.60.29/app_webservice/app/xieyi_zhuce_HK.html"]]];
+//    http://ryh.zyskcn.com:8092/WebService/RYH_Interface.asmx
+    [wkV loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ryh.zyskcn.com:8092//app/xieyi_zhuce_HK.html"]]];
     [wkV addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
     [self.view addSubview:wkV];
     

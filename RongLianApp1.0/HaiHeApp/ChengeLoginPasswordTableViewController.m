@@ -33,6 +33,22 @@
     [lefttopTap setNumberOfTouchesRequired:1];
     [self.view addGestureRecognizer:lefttopTap];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    SlideRootViewController *slideVc = (SlideRootViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    
+    slideVc.panGesture.enabled = NO;
+
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    SlideRootViewController *slideVc = (SlideRootViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    
+    slideVc.panGesture.enabled = YES;
+
+}
 
 - (void)selectViewBeTap{
     if ([_oldpasswordTF isFirstResponder]) {

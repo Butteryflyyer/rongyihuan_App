@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface UserLoginStatus : NSObject
-@property (nonatomic, retain)NSString * userid;
-@property (nonatomic, retain)NSString * username;
+@property (nonatomic, copy)NSString * userid;
+@property (nonatomic, copy)NSString * username;//用户名
+@property (nonatomic, copy)NSString *userTel;//手机号
 + (UserLoginStatus *)shareManager;
 @end

@@ -48,6 +48,7 @@
     NSArray * arr = @[@"未认证，点击认证",@"未绑定，点击绑定",@"未设置，点击设置",@""];
     _detailArr = [NSMutableArray arrayWithArray:arr];
     
+    
 }
 
 
@@ -159,6 +160,8 @@
     UIAlertAction * sureA = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
         [userdefault setObject:@"" forKey:@"Myuserid"];
+        [userdefault setObject:@"" forKey:@"UserName"];
+        [userdefault setObject:@"" forKey:@"userTel"];
         [userdefault synchronize];
         NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
         for (int i=0; i<accArr.count; i++) {
@@ -167,6 +170,8 @@
             [SSKeychain deletePasswordForService:@"ronglian" account:name];
         }
         [UserLoginStatus shareManager].userid = nil;
+        [UserLoginStatus shareManager].username = nil;
+        [UserLoginStatus shareManager].userTel = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
 
     }];
