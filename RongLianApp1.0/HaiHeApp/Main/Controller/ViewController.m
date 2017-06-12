@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addSomeSubViews];
+   
     UILabel * titleL = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
     titleL.text = @"账户中心";
     titleL.textColor = [UIColor whiteColor];
@@ -33,13 +33,7 @@
 
 }
 
-- (void)addSomeSubViews{
-    UIButton * redBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    redBtn.frame = CGRectMake(20, 100, 50, 50);
-    redBtn.backgroundColor = [UIColor redColor];
-    [self.view addSubview:redBtn];
 
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

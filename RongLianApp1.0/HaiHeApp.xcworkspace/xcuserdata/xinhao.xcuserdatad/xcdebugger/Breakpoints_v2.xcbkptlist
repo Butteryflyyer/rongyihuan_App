@@ -265,38 +265,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518007298.351062"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "-submitButtonBeTouched:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518007335.813232"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "-submitButtonBeTouched:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HaiHeApp/SSKeychain.m"
             timestampString = "518008006.556757"
             startingColumnNumber = "9223372036854775807"
@@ -304,54 +272,6 @@
             startingLineNumber = "208"
             endingLineNumber = "208"
             landmarkName = "+setPasswordData:forService:account:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518008567.689996"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "-submitButtonBeTouched:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518008613.827059"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "-submitButtonBeTouched:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518008639.443749"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "-submitButtonBeTouched:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -490,27 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518767817.161197"
+            timestampString = "518939024.815992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "-submitButtonBeTouched:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518783141.04019"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "-submitButtonBeTouched:"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518785809.545448"
+            timestampString = "518930648.859307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "-goIntoMain"
             landmarkType = "7">
             <Locations>
@@ -570,11 +474,11 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
-                  timestampString = "518788266.769692"
+                  timestampString = "518939026.295879"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "186"
-                  endingLineNumber = "186"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
                   offsetFromSymbolStart = "44">
                </Location>
                <Location
@@ -585,11 +489,11 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
-                  timestampString = "518788266.771446"
+                  timestampString = "518939026.298074"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "187"
-                  endingLineNumber = "187"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
                   offsetFromSymbolStart = "84">
                </Location>
             </Locations>
@@ -602,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518785809.545448"
+            timestampString = "518930648.859307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-goIntoMain"
             landmarkType = "7">
          </BreakpointContent>
@@ -618,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518785809.545448"
+            timestampString = "518930648.859307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-goIntoMain"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518785809.545448"
+            timestampString = "518930648.859307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "-goIntoMain"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518776125.270212"
+            timestampString = "518939024.815992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-submitButtonBeTouched:"
             landmarkType = "7">
             <Locations>
@@ -682,11 +586,11 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/LoginViewController.m"
-                  timestampString = "518788266.786811"
+                  timestampString = "518939026.496739"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
                   offsetFromSymbolStart = "1464">
                </Location>
                <Location
@@ -697,11 +601,11 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/LoginViewController.m"
-                  timestampString = "518788266.788529"
+                  timestampString = "518939026.500059"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
                   offsetFromSymbolStart = "28">
                </Location>
             </Locations>
@@ -746,7 +650,7 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518788266.794888"
+                  timestampString = "518939026.512472"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "324"
@@ -761,7 +665,7 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518788266.796543"
+                  timestampString = "518939026.515038"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "325"
@@ -794,7 +698,7 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518788266.800843"
+                  timestampString = "518939026.520367"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "329"
@@ -809,7 +713,7 @@
                   moduleName = "HaiHeApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518788266.803387"
+                  timestampString = "518939026.522731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "330"
@@ -858,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/LoginViewController.m"
-            timestampString = "518782726.146428"
+            timestampString = "518939024.815992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "-submitButtonBeTouched:"
             landmarkType = "7">
          </BreakpointContent>
@@ -890,11 +794,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518785809.545448"
+            timestampString = "518930648.859307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -906,11 +810,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518785809.545448"
+            timestampString = "518930648.859307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/RootTableViewController.m"
+            timestampString = "518930493.565379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/AppDelegate.m"
+            timestampString = "518930708.37372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
          </BreakpointContent>

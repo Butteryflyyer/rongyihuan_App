@@ -59,13 +59,10 @@
 #pragma mark -- 获取公司说明
 -(void)getCompanyIntroduce{
     
-    
-    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-    NSString * myuserid = [userdefault objectForKey:@"Myuserid"];
-    if (myuserid) {
+    if ([UserLoginStatus shareManager].userid.length > 0) {
         
         __weak Main_ComponyIntoduce *weakself = self;
-        [[HaiHeNetBridge sharedManager] getCompanyIntorduceWithUserid:myuserid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+        [[HaiHeNetBridge sharedManager] getCompanyIntorduceWithUserid:[UserLoginStatus shareManager].userid WithSuccess:^(NSString *respString, NSDictionary *datadic) {
             __strong typeof(self)strongSelf = weakself;
             if (!respString) {
                
@@ -74,9 +71,6 @@
                     [strongSelf addTishi:Introduce];
                     strongSelf.Compony_Num = 1;
                 }
-                
-             
-                
             }else{
                 [[ShowMessageView shareManager] showMessage:respString];
             }

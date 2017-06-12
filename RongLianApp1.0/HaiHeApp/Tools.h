@@ -15,6 +15,7 @@
 #define Nsnotion_SafeSet @"Safe_Set"
 #define Nsnotion_ShuaXinPhone @"ShuaXinPhone"
 #define Nsnotion_TanchuComponyIntroduce @"TanchuComponyIntroduce"
+#define Nsnotion_AutonLogin_after_regist @"AutonLogin_after_regist" //注册之后自动登录
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height

@@ -23,6 +23,7 @@
 #import "LoginViewController.h"
 #import "RootNavigationController.h"
 #import "leftMain_Vc.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -37,15 +38,16 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    Shenhe_Progress_Vc *shenhe_main = [[Shenhe_Progress_Vc alloc]init];
+    RootTableViewController *Root_main = [[RootTableViewController alloc]init];
     
     leftMain_Vc *leftmain = [[leftMain_Vc alloc]init];
     
-    RootNavigationController *ncMain = [[RootNavigationController alloc]initWithRootViewController:shenhe_main];
+    RootNavigationController *ncMain = [[RootNavigationController alloc]initWithRootViewController:Root_main];
      RootNavigationController *ncLeft = [[RootNavigationController alloc]initWithRootViewController:leftmain];
     SlideRootViewController *vc = [[SlideRootViewController alloc]initWithLeftVC:ncLeft mainVC:ncMain slideTranslationX:200];
     
     self.window.rootViewController = vc;
+    [[Main_Jump shareManager] addNsnotionWithView:Root_main];
 
     if ([[NSUserDefaults standardUserDefaults]objectForKey:@"UserName"]) {
         [UserLoginStatus shareManager].username = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserName"];
@@ -77,7 +79,8 @@
                 //登录;
                 [[HaiHeNetBridge sharedManager] userLoginRequestWithUserName:usernameStr andWithPassword:passwordStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
                     if(respString){
-                        [[Rongyihuan_Tools getCurrentVC] presentViewController:[[LoginViewController alloc]init] animated:NO completion:nil];
+        
+                        [[Rongyihuan_Tools getCurrentVC].navigationController pushViewController:[[LoginViewController alloc]init] animated:NO];
                     }else{
                         //保存用户名和密码;
                         if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {

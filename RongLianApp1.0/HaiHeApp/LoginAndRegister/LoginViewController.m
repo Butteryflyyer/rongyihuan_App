@@ -21,6 +21,7 @@
 @interface LoginViewController ()
 @property (nonatomic, retain)UITextField * nameTF;
 @property (nonatomic, retain)UITextField * passwordTF;
+@property(nonatomic,strong)UIButton *Login_btn;
 @end
 
 @implementation LoginViewController
@@ -35,8 +36,18 @@
     [lefttopTap setNumberOfTapsRequired:1];
     [lefttopTap setNumberOfTouchesRequired:1];
     [self.view addGestureRecognizer:lefttopTap];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(autoLogin:) name:Nsnotion_AutonLogin_after_regist object:nil];
 }
-
+-(void)autoLogin:(NSNotification *)info{
+ //        NSDictionary *dic = @{@"phone":strongSelf.registerPhone,@"password":passwordTF.text};
+    NSDictionary *dic = [info object];
+    if ([dic[@"phone"] length]>0 && [dic[@"password"] length]>0) {
+        self.nameTF.text = dic[@"phone"];
+        self.passwordTF.text = dic[@"password"];
+        [self submitButtonBeTouched:self.Login_btn];
+    }
+}
 - (void)selectViewBeTap{
     if ([_nameTF isFirstResponder]) {
         [_nameTF resignFirstResponder];
@@ -97,6 +108,7 @@
     submitBtn.backgroundColor = nav_bgcolor;
     [submitBtn addTarget:self action:@selector(submitButtonBeTouched:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:submitBtn];
+    self.Login_btn = submitBtn;
     //取消按钮;
     for (int i=0; i<2; i++) {
         UIButton * clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -173,46 +185,6 @@
 
 - (void)submitButtonBeTouched:(UIButton *)sender{
     
-    
-//    [[HaiHeNetBridge sharedManager] userLoginRequestWithUserName:self.nameTF.text andWithPassword:self.passwordTF.text WithSuccess:^(NSString *respString, NSDictionary *datadic) {
-////        [actV stopAnimating];
-//        sender.enabled = YES;
-//        if(respString){
-//            [[ShowMessageView shareManager] showMessage:respString];
-//        }else{
-//            //保存用户名和密码;
-//            NSArray * accArr = [SSKeychain accountsForService:@"ronglian"];
-//            for (int i=0; i<accArr.count; i++) {
-//                NSDictionary * accDic  = accArr[i];
-//                NSString * name = [accDic objectForKey:@"acct"];
-//                [SSKeychain deletePasswordForService:@"ronglian" account:name];
-//            }
-//            
-//            if([SSKeychain setPassword:_passwordTF.text forService:@"ronglian" account:_nameTF.text]){
-//                if ([[datadic objectForKey:@"userId"]isKindOfClass:[NSNull class]]) {
-//                    [[ShowMessageView shareManager] showMessage:@"数据错误,请重试"];
-//                }else{
-//                    NSUserDefaults * userdefault = [NSUserDefaults standardUserDefaults];
-//                    [userdefault setObject:[datadic objectForKey:@"userName"] forKey:@"UserName"];
-//                    [userdefault setObject:[datadic objectForKey:@"userId"] forKey:@"Myuserid"];
-//                    
-//                    NSLog(@"%@",datadic);
-//                    
-//                    [UserLoginStatus shareManager].userid = [datadic objectForKey:@"userId"];
-//                    [UserLoginStatus shareManager].username = _nameTF.text;
-//                    
-//                    [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_ShuaXinPhone object:nil];
-//                    
-//                    [self.navigationController popViewControllerAnimated:YES];
-//                    
-//                        [[[AppDelegate alloc]init]goIntoMain];
-//                }
-//                
-//            }else{
-//                [[ShowMessageView shareManager] showMessage:@"本地数据有误,联系开发者"];
-//            }
-//        }
-//    }];
     
     UIActivityIndicatorView * actV = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     actV.center = self.view.center;
@@ -431,7 +403,9 @@
         }
     }];
 }
-
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

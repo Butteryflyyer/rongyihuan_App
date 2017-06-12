@@ -96,6 +96,7 @@ static NSString *const CellId = @"Shenhe_Progress_Cell";
             }else{
                  [[ShowMessageView shareManager] showMessage:respString];
             }
+
             if (strongSelf.dataSource.count == 0) {
                 strongSelf.noinfo_View = [[[NSBundle mainBundle]loadNibNamed:@"noInfo_footer_View" owner:self options:nil]firstObject];
                 strongSelf.noinfo_View.frame = CGRectMake(0, 64, SCREEN_WIDTH, 200);

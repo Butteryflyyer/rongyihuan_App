@@ -316,10 +316,12 @@
         UIButton * button = (UIButton*)sender;
         button.backgroundColor = [UIColor lightGrayColor];
         button.enabled = NO;
+        __weak typeof(self)weakSelf = self;
         [[HaiHeNetBridge sharedManager] UserregisterRequestWithUserName:_registerPhone andWithUserPassword:passwordTF.text andWithUserPhone:_registerPhone andInviteCode:yaoqingStr WithSuccess:^(NSString *respString, NSDictionary *datadic) {
+            __strong typeof(self)strongSelf = weakSelf;
             button.backgroundColor = nav_bgcolor;
             button.enabled = YES;
-            [self captchaWasError];
+            [strongSelf captchaWasError];
             if(respString){
                 [[ShowMessageView shareManager] showMessage:respString];
             }else{
@@ -345,11 +347,17 @@
                         
                         UIAlertController * alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"注册成功" preferredStyle:UIAlertControllerStyleAlert];
                         UIAlertAction * sureA = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                             [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1]  animated:YES];
+                            
+                            NSDictionary *dic = @{@"phone":strongSelf.registerPhone,@"password":passwordTF.text};
+    //往登录页发送通知。注册成功直接登录
+                            [[NSNotificationCenter defaultCenter]postNotificationName:Nsnotion_AutonLogin_after_regist object:dic];
+                            
+                             [strongSelf.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1]  animated:YES];
+                            
                             
                         }];
                         [alertC addAction:sureA];
-                        [self presentViewController:alertC animated:YES completion:nil];
+                        [strongSelf presentViewController:alertC animated:YES completion:nil];
                     
 //                            RegisterSuccessViewController * successVC = [[RegisterSuccessViewController alloc] init];
 //                            [self.navigationController pushViewController:successVC animated:YES];
