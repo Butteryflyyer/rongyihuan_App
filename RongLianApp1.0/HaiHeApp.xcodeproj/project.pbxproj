@@ -1323,8 +1323,8 @@
 				TargetAttributes = {
 					725BA76C1BB38F9000635293 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = BSGYLY83PB;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = A9X5YRY6K2;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -1839,8 +1839,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = HaiHeApp/HaiHeApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: bing xu (3B53NB8C7E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bing xu (3B53NB8C7E)";
-				DEVELOPMENT_TEAM = BSGYLY83PB;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9X5YRY6K2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1860,8 +1861,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronglian.rongyihuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "add372ca-82cc-446c-bb38-b87f69b2e80d";
-				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_app_dev_201765;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -1875,8 +1876,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = HaiHeApp/HaiHeApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhong Ying Sheng Ke Information Consulting Co., Ltd. (BSGYLY83PB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhong Ying Sheng Ke Information Consulting Co., Ltd. (BSGYLY83PB)";
-				DEVELOPMENT_TEAM = BSGYLY83PB;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9X5YRY6K2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1896,8 +1898,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronglian.rongyihuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "05237507-1b78-4825-a1f8-42faa82202b7";
-				PROVISIONING_PROFILE_SPECIFIER = rongyihuan_app_Dis201765;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};

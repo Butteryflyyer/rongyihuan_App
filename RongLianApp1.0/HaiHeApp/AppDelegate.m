@@ -24,7 +24,6 @@
 #import "RootNavigationController.h"
 #import "leftMain_Vc.h"
 #import "ViewController.h"
-//\(^o^)/~
 @interface AppDelegate ()
 
 @end
@@ -64,9 +63,9 @@
 //    [[gaode_Location shareInstance] getLocation:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
 //
 //    }];
-//    [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
-//        
-//    }];
+    [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
+        NSLog(@"%@",personInfoArray);
+    }];
     if ([UserLoginStatus shareManager].userid.length > 0) {
         NSArray * accoutArr = [SSKeychain accountsForService:@"ronglian"];
         NSLog(@"%@",accoutArr);

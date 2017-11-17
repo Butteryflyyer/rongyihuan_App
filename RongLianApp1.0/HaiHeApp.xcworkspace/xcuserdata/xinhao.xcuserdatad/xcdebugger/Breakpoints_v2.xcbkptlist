@@ -458,45 +458,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930648.859307"
+            timestampString = "531634902.695177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "189"
             endingLineNumber = "189"
             landmarkName = "-goIntoMain"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate goIntoMain]"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
-                  timestampString = "518939026.295879"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25-[AppDelegate goIntoMain]_block_invoke"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
-                  timestampString = "518939026.298074"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "190"
-                  endingLineNumber = "190"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -506,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930648.859307"
+            timestampString = "531634902.695749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "195"
@@ -522,13 +490,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930648.859307"
+            timestampString = "531634902.696123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
             endingLineNumber = "207"
             landmarkName = "-goIntoMain"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__25-[AppDelegate goIntoMain]_block_invoke"
+                  moduleName = "HaiHeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
+                  timestampString = "531634902.759423"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "712">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__25-[AppDelegate goIntoMain]_block_invoke"
+                  moduleName = "HaiHeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
+                  timestampString = "531634902.760806"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "804">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -538,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930648.859307"
+            timestampString = "531634902.696479"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
@@ -577,38 +577,6 @@
             endingLineNumber = "205"
             landmarkName = "-submitButtonBeTouched:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginViewController submitButtonBeTouched:]"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/LoginViewController.m"
-                  timestampString = "518939026.496739"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205"
-                  offsetFromSymbolStart = "1464">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__45-[LoginViewController submitButtonBeTouched:]_block_invoke"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/LoginViewController.m"
-                  timestampString = "518939026.500059"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "205"
-                  endingLineNumber = "205"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -641,38 +609,6 @@
             endingLineNumber = "324"
             landmarkName = "-yanzhengButtonBeTouched:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ForgetPasswordTableViewController yanzhengButtonBeTouched:]"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518939026.512472"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "324"
-                  endingLineNumber = "324"
-                  offsetFromSymbolStart = "452">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[ForgetPasswordTableViewController yanzhengButtonBeTouched:]_block_invoke"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518939026.515038"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "325"
-                  endingLineNumber = "325"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -689,38 +625,6 @@
             endingLineNumber = "329"
             landmarkName = "-yanzhengButtonBeTouched:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[ForgetPasswordTableViewController yanzhengButtonBeTouched:]_block_invoke"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518939026.520367"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "329"
-                  endingLineNumber = "329"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[ForgetPasswordTableViewController yanzhengButtonBeTouched:]_block_invoke_2"
-                  moduleName = "HaiHeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/ForgetPasswordTableViewController.m"
-                  timestampString = "518939026.522731"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "330"
-                  endingLineNumber = "330"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -794,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930648.859307"
+            timestampString = "531634902.697021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -810,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930648.859307"
+            timestampString = "531634902.697396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -842,13 +746,173 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HaiHeApp/AppDelegate.m"
-            timestampString = "518930708.37372"
+            timestampString = "531634902.697799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/Main/Controller/leftMain_Vc.m"
+            timestampString = "531633167.811373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-ReloadData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/Main/Controller/leftMain_Vc.m"
+            timestampString = "531633167.811678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-ReloadData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/NetWork/HaiHeNetBridge.m"
+            timestampString = "531633178.772673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1202"
+            endingLineNumber = "1202"
+            landmarkName = "-postPhoneListWitharr:WithUserid:WithSuccess:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HaiHeNetBridge postPhoneListWitharr:WithUserid:WithSuccess:]"
+                  moduleName = "HaiHeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/NetWork/HaiHeNetBridge.m"
+                  timestampString = "531634902.785493"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1202"
+                  endingLineNumber = "1202"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__62-[HaiHeNetBridge postPhoneListWitharr:WithUserid:WithSuccess:]_block_invoke"
+                  moduleName = "HaiHeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/NetWork/HaiHeNetBridge.m"
+                  timestampString = "531634902.786813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1203"
+                  endingLineNumber = "1203"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/AppDelegate.m"
+            timestampString = "531634902.698453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/AppDelegate.m"
+            timestampString = "531634902.698799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HaiHeApp/AppDelegate.m"
+            timestampString = "531634902.699146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate application:didFinishLaunchingWithOptions:]"
+                  moduleName = "HaiHeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
+                  timestampString = "531634902.796205"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1968">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke"
+                  moduleName = "HaiHeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinhao/rongyihuan_App/RongLianApp1.0/HaiHeApp/AppDelegate.m"
+                  timestampString = "531634902.797705"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
