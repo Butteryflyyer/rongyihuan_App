@@ -24,10 +24,9 @@
 #import "RootNavigationController.h"
 #import "leftMain_Vc.h"
 #import "ViewController.h"
-<<<<<<< HEAD
+
 //dasfafsdfdsfadadsads
-=======
->>>>>>> e91df37cab6275d8fb0cfdd327cba7f38d6f3922
+
 @interface AppDelegate ()
 
 @end
