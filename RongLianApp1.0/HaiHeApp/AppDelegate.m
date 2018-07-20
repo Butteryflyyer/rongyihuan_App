@@ -69,7 +69,7 @@
     [HandleAddressBook addressBookAuthorization:^(NSMutableArray<PersonInfoModel *> *personInfoArray) {
         NSLog(@"%@",personInfoArray);
     }];
-    //love
+    
     if ([UserLoginStatus shareManager].userid.length > 0) {
         NSArray * accoutArr = [SSKeychain accountsForService:@"ronglian"];
         NSLog(@"%@",accoutArr);
